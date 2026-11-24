@@ -1,0 +1,774 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AL-MULK - Online Learning Academy</title>
+    <!-- ربط ملف الـ CSS -->
+
+    <link rel="stylesheet" href="/assets/css/style.css" />
+    <link rel="stylesheet" href="/assets/css/componentsCss/navbar.css" />
+    <link rel="stylesheet" href="/assets/css/componentsCss/footer.css" />
+    <link rel="stylesheet" href="/assets/css/componentsCss/guide-card.css" />
+    <link
+      rel="stylesheet"
+      href="/assets/css/componentsCss/testimonials-section.css"
+    />
+    <link
+      rel="stylesheet"
+      href="/assets/css/componentsCss/cta-banner-section.css"
+    />
+    <link rel="stylesheet" href="/assets/css/componentsCss/faq-section.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+  </head>
+  <body>
+    <!-- شريط التنقل العلوي (Navbar) -->
+    <header class="single-course-nav-section nav-overlay">
+      <div id="navbar-placeholder"></div>
+    </header>
+    <section class="hero-section">
+      <!-- 1. صورة الخلفية وطبقة التدرج اللوني -->
+      <div class="hero-bg">
+        <!-- استبدل رابط الصورة هنا بصورة الطفل الذي يقرأ القرآن في الخلفية -->
+        <img
+          src="/assets/images/93b71323531f5f693427044c8b30fcfd8558a9bf.webp"
+          alt="Background Child Reading Quran"
+          class="bg-image"
+        />
+        <div class="bg-overlay"></div>
+      </div>
+
+      <!-- 3. المحتوى الرئيسي (النصوص على اليسار + الصور المائلة على اليمين) -->
+      <div class="hero-container">
+        <!-- القسم الأيسر: النصوص والأزرار -->
+        <div class="hero-content">
+          <div class="badge">
+            <span class="badge-dot"></span>
+            <span>ONLINE LEARNING Academy</span>
+          </div>
+
+          <h1 class="hero-title">
+            Learn Quran &amp; Arabic<br />
+            Online, One-to-One
+          </h1>
+
+          <p class="hero-description">
+            Live interactive private sessions with certified native tutors.
+            Tailored for children starting at age 5 and adult learners striving
+            for flawless Tajweed from home.
+          </p>
+
+          <div class="hero-buttons">
+            <a href="subscribe.html" class="btn-primary"
+              >Book a free 30-min trial</a
+            >
+            <a href="courses.html" class="btn-secondary">Explore courses</a>
+          </div>
+        </div>
+
+        <!-- القسم الأيمن: الصور المائلة والتقييم -->
+        <div class="hero-visuals">
+          <div class="cards-stack">
+            <!-- البطاقة الخلفية المائلة لليمين -->
+            <div class="photo-card card-right">
+              <!-- استبدل الرابط هنا بالصورة اليمنى -->
+              <img
+                src="/assets/images/d69834f74dbd429d752d1bf93f086fbafba5d899.WebP"
+                alt="Student learning online"
+              />
+            </div>
+
+            <!-- البطاقة الأمامية المائلة قليلاً لليسار -->
+            <div class="photo-card card-left">
+              <!-- استبدل الرابط هنا بالصورة اليسرى -->
+              <img
+                src="/assets/images/5ae2b384ee74113f90e5681e2cf8eca1ecb69c95.WebP"
+                alt="Teacher online session"
+              />
+            </div>
+          </div>
+
+          <!-- كبسولة التقييم السفلية -->
+          <div class="rating-pill">
+            <div class="stars">
+              <!-- حط مسار صورة النجوم بتاعتك هنا -->
+              <img
+                src="/assets/images/Frame 8.WebP"
+                alt="5 Stars"
+                class="rating-stars-img"
+              />
+            </div>
+            <span class="rating-text">4.3/5 from 420+ student families</span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ================= القسم الثاني: Methodology Section ================= -->
+    <section class="methodology-section">
+      <div class="methodology-container">
+        <!-- الجانب الأيسر: صورة المصحف -->
+        <div class="methodology-image-box">
+          <!-- حط مسار صورة المصحف بتاعتك هنا -->
+          <img
+            src="/assets/images/53313195ff6b2b950f3d3a77ba74ecaaa375a5fa.WebP"
+            alt="Reading Quran Outdoors"
+            class="methodology-img"
+          />
+        </div>
+
+        <!-- الجانب الأيمن: النصوص والبطاقات -->
+        <div class="methodology-content" data-aos="fade-up">
+          <!-- الكبسولة العلوية -->
+          <span class="methodology-badge">Authentic Methodology</span>
+
+          <!-- العنوان الرئيسي -->
+          <h2 class="methodology-title">
+            Traditional scholarship meets<br />
+            modern interactive guidance.
+          </h2>
+
+          <!-- الفقرة النصية -->
+          <p class="methodology-desc">
+            Online Quran education should not feel mechanical. At Al-Mulk
+            Academy, each lesson connects student and teacher via high-fidelity,
+            bidirectional screen sharing, phonetics review, and personalized
+            memory benchmarks designed for enduring retention.
+          </p>
+
+          <!-- شبكة البطاقات السفلية -->
+          <div class="methodology-cards-grid">
+            <!-- العمود الأيسر للبطاقات (الخضراء والسوداء) -->
+            <div class="cards-left-col">
+              <div class="info-card card-teal">
+                <h3>100% Native</h3>
+                <p>
+                  Native Arabic speaking teachers with fluent English &amp;
+                  German capabilities.
+                </p>
+              </div>
+
+              <div class="info-card card-dark">
+                <h3>Zero Contracts</h3>
+                <p>
+                  Cancel or pause any monthly subscription with complete
+                  flexibility at any time.
+                </p>
+              </div>
+            </div>
+
+            <!-- العمود الأيمن: البطاقة البرتقالية والخريطة الشفافة -->
+            <div class="info-card card-orange">
+              <h3 class="orange-card-title">
+                Any <span class="dark-word">where,</span> Can learn
+              </h3>
+
+              <!-- مكان صورة الخريطة الشفافة بتاعتك -->
+              <div class="world-map-box">
+                <!-- استبدل map.WebP بمسار صورة الخريطة الشفافة اللي عندك -->
+                <img
+                  src="/assets/images/Group.WebP"
+                  alt="World Map"
+                  class="map-img"
+                />
+              </div>
+
+              <!-- النسبة المئوية والنص السفلي -->
+              <div class="orange-card-stat">
+                <span class="stat-number" data-target="86">86%</span>
+                <span class="stat-label"
+                  >Students from various<br />countries</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ================= القسم الثالث: Onboarding Steps Section ================= -->
+    <section class="onboarding-section">
+      <div class="onboarding-container">
+        <!-- رأس السكشن (العنوان والوصف) -->
+        <div class="onboarding-header">
+          <span class="onboarding-badge">Simple Onboarding</span>
+          <h2 class="onboarding-title">How to begin your Quranic journey</h2>
+          <p class="onboarding-subtitle">
+            Four gentle steps from your initial curiosity to regular, fulfilling
+            private recitations.
+          </p>
+        </div>
+
+        <!-- حاوية الكروت الأربعة (مقسمة لعمودين بنفس التدرج في التصميم) -->
+        <div class="steps-layout">
+          <!-- العمود الأيسر (يحتوي على الكارت 02 والكارت 04) -->
+          <div class="steps-col steps-col-left">
+            <!-- كارت 02: الأبيض -->
+            <div class="step-card card-step-white">
+              <span class="step-num">02</span>
+
+              <div class="step-info">
+                <h3 class="step-heading">Teacher Pairing</h3>
+                <p class="step-desc">
+                  Get matched with the ideal male or female tutor based on
+                  preferred language, pace, and schedule.
+                </p>
+
+                <!-- مشغل الصوت الموجي -->
+                <div class="audio-wave" data-active-bars="11">
+                  <button
+                    type="button"
+                    class="wave-play-btn"
+                    aria-label="Play audio"
+                  >
+                    <svg viewBox="0 0 24 24" fill="none">
+                      <path
+                        d="M6 4.75L18.25 12L6 19.25V4.75Z"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </button>
+                  <span class="wave-dot"></span>
+                  <div class="wave-bars"></div>
+                  <audio
+                    class="step-audio"
+                    preload="metadata"
+                    src="/assets/001.mp3"
+                  ></audio>
+                </div>
+              </div>
+
+              <!-- مكان الشكل/الصورة في يمين الكارت 02 -->
+              <div class="step-illustration illus-bottom">
+                <!-- استبدل الرابط هنا بصورة كارت 02 الشفافة اللي عندك -->
+                <img
+                  src="/assets/images/04..gif"
+                  alt="Teacher Pairing"
+                  class="step-img custom"
+                />
+              </div>
+            </div>
+
+            <!-- كارت 04: التييل (الأخضر الغامق) -->
+            <div class="step-card card-step-teal">
+              <span class="step-num">04</span>
+
+              <div class="step-info">
+                <h3 class="step-heading">Free Lessons</h3>
+                <p class="step-desc">
+                  Log in to your 1:1 room, follow along the digital Mus'haf, and
+                  experience consistent spiritual progression.
+                </p>
+
+                <!-- مشغل الصوت الموجي -->
+                <div class="audio-wave" data-active-bars="11">
+                  <button
+                    type="button"
+                    class="wave-play-btn"
+                    aria-label="Play audio"
+                  >
+                    <svg viewBox="0 0 24 24" fill="none">
+                      <path
+                        d="M6 4.75L18.25 12L6 19.25V4.75Z"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </button>
+                  <span class="wave-dot"></span>
+                  <div class="wave-bars"></div>
+                  <audio
+                    class="step-audio"
+                    preload="metadata"
+                    src="/assets/001.mp3"
+                  ></audio>
+                </div>
+              </div>
+
+              <!-- مكان الشكل/الصورة في يمين الكارت 04 -->
+              <div class="step-illustration">
+                <!-- استبدل الرابط هنا بصورة كارت 04 الشفافة اللي عندك -->
+                <img
+                  src="/assets/images//03..gif"
+                  alt="Free Lessons"
+                  class="step-img"
+                />
+              </div>
+            </div>
+          </div>
+
+          <!-- العمود الأيمن (يحتوي على الكارت 01 والكارت 03) -->
+          <div class="steps-col steps-col-right">
+            <!-- كارت 01: الأسود/الرمادي الداكن -->
+            <div class="step-card card-step-dark">
+              <span class="step-num">01</span>
+
+              <div class="step-info">
+                <h3 class="step-heading">Free Assessment</h3>
+                <p class="step-desc">
+                  Book a complimentary 30-minute 1:1 call to evaluate current
+                  reading proficiency and personal goals.
+                </p>
+
+                <!-- مشغل الصوت الموجي -->
+                <div class="audio-wave" data-active-bars="11">
+                  <button
+                    type="button"
+                    class="wave-play-btn"
+                    aria-label="Play audio"
+                  >
+                    <svg viewBox="0 0 24 24" fill="none">
+                      <path
+                        d="M6 4.75L18.25 12L6 19.25V4.75Z"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </button>
+                  <span class="wave-dot"></span>
+                  <div class="wave-bars"></div>
+                  <audio
+                    class="step-audio"
+                    preload="metadata"
+                    src="/assets/001.mp3"
+                  ></audio>
+                </div>
+              </div>
+
+              <!-- مكان الشكل/الصورة في يمين الكارت 01 -->
+              <div class="step-illustration">
+                <!-- استبدل الرابط هنا بصورة كارت 01 الشفافة اللي عندك -->
+                <img
+                  src="/assets/images//02..gif"
+                  alt="Free Assessment"
+                  class="step-img"
+                />
+              </div>
+            </div>
+
+            <!-- كارت 03: البرتقالي -->
+            <div class="step-card card-step-orange">
+              <span class="step-num">03</span>
+
+              <div class="step-info">
+                <h3 class="step-heading">Flexible Schedule</h3>
+                <p class="step-desc">
+                  Select recurring times that fit family life seamlessly.
+                  Reschedule with 12 hours notice easily online.
+                </p>
+
+                <!-- مشغل الصوت الموجي -->
+                <div class="audio-wave" data-active-bars="11">
+                  <button
+                    type="button"
+                    class="wave-play-btn"
+                    aria-label="Play audio"
+                  >
+                    <svg viewBox="0 0 24 24" fill="none">
+                      <path
+                        d="M6 4.75L18.25 12L6 19.25V4.75Z"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </button>
+                  <span class="wave-dot"></span>
+                  <div class="wave-bars"></div>
+                  <audio
+                    class="step-audio"
+                    preload="metadata"
+                    src="/assets/001.mp3"
+                  ></audio>
+                </div>
+              </div>
+
+              <!-- مكان الشكل/الصورة في يمين الكارت 03 -->
+              <div class="step-illustration">
+                <!-- استبدل الرابط هنا بصورة كارت 03 الشفافة اللي عندك -->
+                <img
+                  src="/assets/images/01...gif"
+                  alt="Flexible Schedule"
+                  class="step-img"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ================= القسم الرابع: Courses Tracks Section ================= -->
+    <section class="courses-section">
+      <div class="courses-container">
+        <!-- شارة CURRICULUM PATHWAYS العلوية -->
+        <span class="courses-top-badge">CURRICULUM PATHWAYS</span>
+
+        <!-- صف العنوان وزرار Browse Courses -->
+        <div class="courses-header-row">
+          <h2 class="courses-main-title">
+            Explore Dedicated<br />
+            Course Tracks
+          </h2>
+
+          <!-- حط مسار صفحة كل الكورسات في الـ href هنا -->
+          <a href="courses.html" class="btn-browse-courses">
+            <span>Browse Courses</span>
+            <svg class="arrow-up-right" viewBox="0 0 24 24" fill="none">
+              <path
+                d="M7 17L17 7M17 7H8M17 7V16"
+                stroke="currentColor"
+                stroke-width="2.2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </a>
+        </div>
+
+        <!-- شبكة الكروت الثلاثة -->
+        <div class="courses-grid">
+          <!-- ================= الكارت الأول (Just Kids) ================= -->
+          <div class="course-card">
+            <!-- الصورة قابلة للضغط (Clickable) - حط مسار الصفحة في href ومسار صورتك في src -->
+            <a href="single-course.html" class="course-img-link">
+              <span class="card-age-badge badge-dark">Just Kids</span>
+              <img
+                src="/assets/images/Container.WebP"
+                alt="Beginner Quran Reading"
+                class="course-img"
+              />
+            </a>
+
+            <!-- التاجات الصغيرة تحت الصورة -->
+            <div class="course-tags">
+              <span class="course-tag">Foundational</span>
+              <span class="course-tag">All ages</span>
+            </div>
+
+            <!-- عنوان ووصف الكورس -->
+            <h3 class="course-title">
+              <a href="single-course.html">Beginner Quran Reading</a>
+            </h3>
+            <p class="course-desc">
+              Learn the Arabic alphabet, letter connecting rules, and vowel
+              vocalization using the renowned Noorani Qaida.
+            </p>
+
+            <!-- أزرار الكارت السفلية (Course Details + السهم البرتقالي) -->
+            <div class="course-footer">
+              <!-- حط مسار صفحة تفاصيل الكورس هنا -->
+              <a href="single-course.html" class="btn-course-details">
+                <svg class="help-bubble-icon" viewBox="0 0 24 24" fill="none">
+                  <path
+                    d="M12 2C6.48 2 2 6.03 2 11C2 13.13 2.82 15.08 4.2 16.62L3 21L7.79 19.34C9.1 19.77 10.52 20 12 20C17.52 20 22 15.97 22 11C22 6.03 17.52 2 12 2Z"
+                    fill="#FFFFFF"
+                  />
+                  <path
+                    d="M10.5 9.25C10.5 8.42 11.17 7.75 12 7.75C12.83 7.75 13.5 8.42 13.5 9.25C13.5 9.85 13.15 10.36 12.64 10.6C12.25 10.78 12 11.16 12 11.59V12.25"
+                    stroke="#08575B"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                  />
+                  <circle cx="12" cy="14.5" r="1" fill="#08575B" />
+                </svg>
+                <span>Course Details</span>
+              </a>
+
+              <!-- حط مسار صفحة تفاصيل الكورس هنا برضه لزرار السهم -->
+              <a
+                href="single-course.html"
+                class="btn-course-arrow"
+                aria-label="Go to course details"
+              >
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path
+                    d="M7 17L17 7M17 7H8M17 7V16"
+                    stroke="currentColor"
+                    stroke-width="2.3"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- ================= الكارت الثاني (Adult) ================= -->
+          <div class="course-card">
+            <!-- الصورة قابلة للضغط (Clickable) - حط مسار الصفحة في href ومسار صورتك في src -->
+            <a href="single-course.html" class="course-img-link">
+              <span class="card-age-badge badge-teal">Adult</span>
+              <img
+                src="/assets/images/Container.WebP"
+                alt="Beginner Quran Reading"
+                class="course-img"
+              />
+            </a>
+
+            <!-- التاجات الصغيرة تحت الصورة -->
+            <div class="course-tags">
+              <span class="course-tag">Foundational</span>
+              <span class="course-tag">All ages</span>
+            </div>
+
+            <!-- عنوان ووصف الكورس -->
+            <h3 class="course-title">
+              <a href="single-course.html">Beginner Quran Reading</a>
+            </h3>
+            <p class="course-desc">
+              Learn the Arabic alphabet, letter connecting rules, and vowel
+              vocalization using the renowned Noorani Qaida.
+            </p>
+
+            <!-- أزرار الكارت السفلية (Course Details + السهم البرتقالي) -->
+            <div class="course-footer">
+              <!-- حط مسار صفحة تفاصيل الكورس هنا -->
+              <a href="single-course.html" class="btn-course-details">
+                <svg class="help-bubble-icon" viewBox="0 0 24 24" fill="none">
+                  <path
+                    d="M12 2C6.48 2 2 6.03 2 11C2 13.13 2.82 15.08 4.2 16.62L3 21L7.79 19.34C9.1 19.77 10.52 20 12 20C17.52 20 22 15.97 22 11C22 6.03 17.52 2 12 2Z"
+                    fill="#FFFFFF"
+                  />
+                  <path
+                    d="M10.5 9.25C10.5 8.42 11.17 7.75 12 7.75C12.83 7.75 13.5 8.42 13.5 9.25C13.5 9.85 13.15 10.36 12.64 10.6C12.25 10.78 12 11.16 12 11.59V12.25"
+                    stroke="#08575B"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                  />
+                  <circle cx="12" cy="14.5" r="1" fill="#08575B" />
+                </svg>
+                <span>Course Details</span>
+              </a>
+
+              <!-- حط مسار صفحة تفاصيل الكورس هنا برضه لزرار السهم -->
+              <a
+                href="single-course.html"
+                class="btn-course-arrow"
+                aria-label="Go to course details"
+              >
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path
+                    d="M7 17L17 7M17 7H8M17 7V16"
+                    stroke="currentColor"
+                    stroke-width="2.3"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- ================= الكارت الثالث (All ages) ================= -->
+          <div class="course-card">
+            <!-- الصورة قابلة للضغط (Clickable) - حط مسار الصفحة في href ومسار صورتك في src -->
+            <a href="single-course.html" class="course-img-link">
+              <span class="card-age-badge badge-orange">All ages</span>
+              <img
+                src="/assets/images/Container.WebP"
+                alt="Beginner Quran Reading"
+                class="course-img"
+              />
+            </a>
+
+            <!-- التاجات الصغيرة تحت الصورة -->
+            <div class="course-tags">
+              <span class="course-tag">Foundational</span>
+              <span class="course-tag">All ages</span>
+            </div>
+
+            <!-- عنوان ووصف الكورس -->
+            <h3 class="course-title">
+              <a href="single-course.html">Beginner Quran Reading</a>
+            </h3>
+            <p class="course-desc">
+              Learn the Arabic alphabet, letter connecting rules, and vowel
+              vocalization using the renowned Noorani Qaida.
+            </p>
+
+            <!-- أزرار الكارت السفلية (Course Details + السهم البرتقالي) -->
+            <div class="course-footer">
+              <!-- حط مسار صفحة تفاصيل الكورس هنا -->
+              <a href="single-course.html" class="btn-course-details">
+                <svg class="help-bubble-icon" viewBox="0 0 24 24" fill="none">
+                  <path
+                    d="M12 2C6.48 2 2 6.03 2 11C2 13.13 2.82 15.08 4.2 16.62L3 21L7.79 19.34C9.1 19.77 10.52 20 12 20C17.52 20 22 15.97 22 11C22 6.03 17.52 2 12 2Z"
+                    fill="#FFFFFF"
+                  />
+                  <path
+                    d="M10.5 9.25C10.5 8.42 11.17 7.75 12 7.75C12.83 7.75 13.5 8.42 13.5 9.25C13.5 9.85 13.15 10.36 12.64 10.6C12.25 10.78 12 11.16 12 11.59V12.25"
+                    stroke="#08575B"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                  />
+                  <circle cx="12" cy="14.5" r="1" fill="#08575B" />
+                </svg>
+                <span>Course Details</span>
+              </a>
+
+              <!-- حط مسار صفحة تفاصيل الكورس هنا برضه لزرار السهم -->
+              <a
+                href="single-course.html"
+                class="btn-course-arrow"
+                aria-label="Go to course details"
+              >
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path
+                    d="M7 17L17 7M17 7H8M17 7V16"
+                    stroke="currentColor"
+                    stroke-width="2.3"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ================= القسم الخامس: Household Features Section ================= -->
+    <section class="household-section">
+      <!-- الحاوية البيضاء الكبيرة -->
+      <div class="household-white-box">
+        <!-- البانر العلوي (حط مسار صورتك مكان banner.WebP) -->
+        <div class="household-banner">
+          <img
+            src="/assets/images/399b709c49f2420cea62670128a636159558da2b.WebP"
+            alt="Accessible sacred learning"
+            class="household-banner-img"
+          />
+
+          <!-- التدرج التييل السفلي والعنوان -->
+          <div class="household-banner-overlay">
+            <h2 class="household-banner-title">
+              Accessible sacred learning for the whole household
+            </h2>
+          </div>
+        </div>
+
+        <!-- شبكة الكروت الأربعة السفلية -->
+        <div class="household-features-grid">
+          <!-- الكارت الأول: 1 TO 1 Zoom -->
+          <div class="feature-item-card">
+            <div class="feature-icon-box">
+              <!-- حط مسار صورة الأيقونة الأولى هنا -->
+              <img
+                src="/assets/images/Background (1).WebP"
+                alt="1 TO 1 Zoom"
+                class="feature-icon-img"
+              />
+            </div>
+            <h3 class="feature-item-title">
+              1 <span class="text-gold">TO</span> 1 Zoom
+            </h3>
+            <p class="feature-item-desc">
+              High-definition private video room with interactive screen notes
+              and playback.
+            </p>
+          </div>
+
+          <!-- الكارت الثاني: 30 or 60m -->
+          <div class="feature-item-card">
+            <div class="feature-icon-box">
+              <!-- حط مسار صورة الأيقونة الثانية هنا -->
+              <img
+                src="/assets/images/Background (2).WebP"
+                alt="30 or 60m"
+                class="feature-icon-img"
+              />
+            </div>
+            <h3 class="feature-item-title">
+              30 <span class="text-teal">or</span> 60m
+            </h3>
+            <p class="feature-item-desc">
+              Optimal 30m slots for energetic children or deep 60m intensive
+              adult tracks.
+            </p>
+          </div>
+
+          <!-- الكارت الثالث: 7 Days/Wk -->
+          <div class="feature-item-card">
+            <div class="feature-icon-box">
+              <!-- حط مسار صورة الأيقونة الثالثة هنا -->
+              <img
+                src="/assets/images/Background (3).WebP"
+                alt="7 Days/Wk"
+                class="feature-icon-img"
+              />
+            </div>
+            <h3 class="feature-item-title">
+              7 <span class="text-grey">Days</span>/Wk
+            </h3>
+            <p class="feature-item-desc">
+              Sessions starting from 07:00 to 22:00 across Europe and American
+              timezones.
+            </p>
+          </div>
+
+          <!-- الكارت الرابع: From €6 -->
+          <div class="feature-item-card">
+            <div class="feature-icon-box">
+              <!-- حط مسار صورة الأيقونة الرابعة هنا -->
+              <img
+                src="/assets/images/Background (4).WebP"
+                alt="From €6"
+                class="feature-icon-img"
+              />
+            </div>
+            <h3 class="feature-item-title">
+              From <span class="text-gold">€6</span>
+            </h3>
+            <p class="feature-item-desc">
+              Transparent hourly pricing with zero hidden enrolment or textbook
+              surcharges.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ================= القسم السادس: Articles / Guides Section ================= -->
+    <section class="guides-section">
+      <div class="guides-container">
+        <!-- شارة Latest articles العلوية -->
+        <span class="guides-top-badge">Latest articles</span>
+
+        <!-- عنوان السكشن والوصف -->
+        <h2 class="guides-main-title">Guides for your learning journey</h2>
+        <p class="guides-subtitle">
+          Short, practical reads from our teachers — for beginners, advanced
+          learners and parents.
+        </p>
+
+        <!-- شبكة المقالات/الكروت الثلاثة -->
+        <div class="guides-grid">
+          <div id="guide-card-placeholder"></div>
+          <div id="guide-card-placeholder"></div>
+          <div id="guide-card-placeholder"></div>
+        </div>
+        <!-- زرار Explore blogs السفلي العام -->
+        <div class="guides-footer-btn-box">
+          <a href="blogs.html" class="btn-explore-blogs">Explore blogs</a>
+        </div>
+      </div>
+    </section>
+    <!-- ================= قسم آراء العملاء: Testimonials Section ================= -->
+    <div id="testimonials-section-placeholder"></div>
+    <!-- ================= القسم السابع: CTA Trial Banner Section ================= -->
+    <div id="cta-banner-section-placeholder"></div>
+    <!-- ================= القسم الثامن: FAQ Accordion Section ================= -->
+    <div id="faq-section-placeholder"></div>
+    <!--  -->
+    <div id="footer-placeholder"></div>
+
+    <!-- ربط ملف الـ JS -->
+    <script src="/assets/js/main.js"></script>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>

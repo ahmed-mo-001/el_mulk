@@ -1,0 +1,376 @@
+/* استيراد خط مشابه جداً للتصميم */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap");
+
+/* إعدادات عامة وتصفير الهوامش */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  /* استخدام clip للحفاظ على عمل position: sticky بدون مشاكل */
+  overflow-x: clip;
+  background-color: #ffffff;
+}
+
+/* ================= شريط التنقل العلوي لصفحة تفاصيل الكورس (Navbar Section) ================= */
+.single-course-nav-section {
+  width: 100%;
+  padding: 24px 40px 0 40px;
+  background-color: transparent;
+}
+
+/* ========== Terms & Conditions Section ========== */
+.terms-section {
+  width: 100%;
+  background-color: #ffffff;
+  padding: 45px 20px 95px;
+}
+
+.terms-container {
+  width: 100%;
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+/* ========== Header ========== */
+.terms-header {
+  margin-bottom: 48px;
+}
+
+.terms-gold-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background-color: #df9a18;
+  color: #ffffff;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.4px;
+  padding: 5px 14px;
+  border-radius: 50px;
+  margin-bottom: 14px;
+  text-transform: uppercase;
+}
+
+.terms-main-title {
+  font-size: 38px;
+  font-weight: 800;
+  color: #065553;
+  margin-bottom: 12px;
+  letter-spacing: -0.6px;
+}
+
+.terms-main-subtitle {
+  font-size: 13.5px;
+  font-weight: 400;
+  color: #666666;
+  line-height: 1.6;
+}
+
+/* ========== Grid Layout (Sticky Left Aside + Right Content) ========== */
+.terms-layout-grid {
+  display: grid;
+  grid-template-columns: 245px 1fr;
+  gap: 60px;
+  align-items: start;
+}
+
+/* ========== Left Column: Sticky TOC Card ========== */
+.terms-sidebar-aside {
+  position: sticky;
+  top: 8rem;
+}
+
+.terms-toc-card {
+  background-color: #ffffff;
+  border-radius: 16px;
+  padding: 22px 16px;
+  box-shadow: 0 6px 28px rgba(0, 0, 0, 0.06);
+  border: 1px solid #f2f2f2;
+}
+
+.terms-toc-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 8px;
+  margin-bottom: 16px;
+}
+
+.terms-toc-title {
+  font-size: 10px;
+  font-weight: 800;
+  color: #333333;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.terms-toc-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.terms-toc-link {
+  position: relative;
+  display: block;
+  font-size: 11px;
+  font-weight: 500;
+  color: #555555;
+  text-decoration: none;
+  padding: 9px 14px;
+  border-radius: 7px;
+  transition: all 0.2s ease;
+}
+
+.terms-toc-link:hover {
+  background-color: #f4f8f8;
+  color: #065553;
+}
+
+/* تصميم الزر المفعّل (الأخضر الغامق مع الخط الذهبي على اليسار كما في الصورة) */
+.terms-toc-link.active {
+  background-color: #065553;
+  color: #ffffff;
+  font-weight: 700;
+  padding-left: 20px;
+}
+
+.terms-toc-link.active::before {
+  content: "";
+  position: absolute;
+  left: 9px;
+  top: 7px;
+  bottom: 7px;
+  width: 3px;
+  background-color: #df9a18;
+  border-radius: 3px;
+}
+
+/* ========== Right Column: Terms Text Content ========== */
+.terms-content-col {
+  width: 100%;
+  max-width: 720px;
+}
+
+.terms-block {
+  margin-bottom: 42px;
+  scroll-margin-top: 30px;
+}
+
+.terms-block-title {
+  position: relative;
+  padding-left: 14px;
+  font-size: 17px;
+  font-weight: 800;
+  color: #065553;
+  margin-bottom: 18px;
+  letter-spacing: -0.2px;
+}
+
+.terms-block-title::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 2px;
+  bottom: 2px;
+  width: 3.5px;
+  background-color: #df9a18;
+  border-radius: 4px;
+}
+
+.terms-paragraph {
+  font-size: 12.8px;
+  font-weight: 500;
+  color: #4a4a4a;
+  line-height: 1.68;
+  margin-bottom: 16px;
+}
+
+.terms-paragraph strong {
+  font-weight: 800;
+  color: #242424;
+}
+
+/* ========== Responsive Design ========== */
+@media (max-width: 991px) {
+  .terms-layout-grid {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+
+  .terms-sidebar-aside {
+    position: static;
+  }
+
+  .terms-content-col {
+    max-width: 100%;
+  }
+
+  .terms-main-title {
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 576px) {
+  .terms-section {
+    padding: 30px 16px 65px;
+  }
+
+  .terms-main-title {
+    font-size: 26px;
+  }
+
+  .terms-main-subtitle br {
+    display: none;
+  }
+}
+
+/* ========== Term 5: Sacred Trust Gold Card ========== */
+.terms-sacred-card {
+  background-color: #df9a18;
+  border-radius: 16px;
+  padding: 28px 30px;
+  color: #ffffff;
+  margin: 36px 0 42px;
+  box-shadow: 0 10px 26px rgba(223, 154, 24, 0.2);
+}
+
+.sacred-card-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 16px;
+}
+
+.sacred-icon-circle {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.22);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.sacred-eyebrow {
+  display: block;
+  font-size: 9px;
+  font-weight: 800;
+  color: #2b2927;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  margin-bottom: 2px;
+}
+
+.sacred-main-title {
+  font-size: 17px;
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: -0.2px;
+}
+
+.sacred-card-desc {
+  font-size: 12.8px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.95);
+  line-height: 1.68;
+}
+
+.sacred-card-desc em {
+  font-style: italic;
+}
+
+@media (max-width: 576px) {
+  .terms-sacred-card {
+    padding: 22px 20px;
+  }
+}
+
+/* ========== Administrative Support Banner ========== */
+.terms-support-banner {
+  background-color: #065553;
+  border-radius: 16px;
+  padding: 32px 34px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  margin-top: 36px;
+  box-shadow: 0 10px 28px rgba(6, 85, 83, 0.16);
+}
+
+.support-banner-left {
+  max-width: 440px;
+}
+
+.support-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 9.5px;
+  font-weight: 800;
+  color: #df9a18;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.support-banner-title {
+  font-size: 18.5px;
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: 8px;
+  letter-spacing: -0.2px;
+}
+
+.support-banner-desc {
+  font-size: 12px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.78);
+  line-height: 1.55;
+}
+
+.btn-contact-support {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background-color: #ffffff;
+  color: #065553;
+  font-size: 12.5px;
+  font-weight: 700;
+  padding: 12px 24px;
+  border-radius: 50px;
+  text-decoration: none;
+  flex-shrink: 0;
+  transition:
+    transform 0.2s ease,
+    background-color 0.2s ease;
+}
+
+.btn-contact-support:hover {
+  background-color: #f2f8f8;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 640px) {
+  .terms-support-banner {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 24px 20px;
+  }
+
+  .btn-contact-support {
+    width: 100%;
+  }
+}

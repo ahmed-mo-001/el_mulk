@@ -1,0 +1,475 @@
+/* استيراد خط Inter + خط عربي للآية القرآنية */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Naskh+Arabic:wght@700&display=swap");
+
+/* إعدادات عامة وتصفير الهوامش */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  overflow-x: hidden;
+  background-color: #fdf6e9;
+}
+
+/* ================= شريط التنقل العلوي لصفحة تفاصيل الكورس (Navbar Section) ================= */
+.single-course-nav-section {
+  width: 100%;
+  padding: 24px 40px 0 40px;
+  background-color: transparent;
+}
+
+.about-container {
+  width: 100%;
+  max-width: 1180px;
+  margin: 0 auto;
+}
+
+/* ========== Section 1: About Hero ========== */
+.about-hero-section {
+  width: 100%;
+  background: linear-gradient(180deg, #fdf6e9 0%, #faedd4 100%);
+  padding: 70px 20px 85px;
+}
+
+.about-hero-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  align-items: center;
+  gap: 40px;
+}
+
+/* Left Content */
+.about-gold-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #e39a06;
+  color: #ffffff;
+  font-size: 11.5px;
+  font-weight: 600;
+  padding: 6px 14px;
+  border-radius: 50px;
+  margin-bottom: 20px;
+}
+
+.badge-white-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #ffffff;
+}
+
+.about-hero-title {
+  font-size: 44px;
+  font-weight: 700;
+  color: #313131;
+  line-height: 1.22;
+  margin-bottom: 20px;
+  letter-spacing: -0.6px;
+}
+
+.about-hero-title .text-gold {
+  color: #e39a06;
+}
+
+.about-hero-desc {
+  font-size: 16px;
+  font-weight: 700;
+  color: #313131;
+  line-height: 1.6;
+  max-width: 470px;
+}
+
+/* Right Stacked Photo Cards */
+.about-hero-cards {
+  position: relative;
+  height: 290px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  filter: drop-shadow(0 14px 28px rgba(255, 172, 4, 0.6))
+    drop-shadow(0 2px 14px rgba(245, 166, 15, 0.25));
+}
+
+/* توهج ذهبي ناعم خلف الصور الثلاث كما في التصميم */
+.about-hero-cards::before {
+  content: "";
+  position: absolute;
+  width: 340px;
+  height: 220px;
+  background: radial-gradient(
+    circle,
+    rgba(223, 154, 24, 0.35) 0%,
+    rgba(223, 154, 24, 0) 70%
+  );
+  filter: blur(18px);
+  z-index: 0;
+}
+
+.hero-photo-card {
+  position: absolute;
+  width: 219px;
+  height: 223px;
+  background-color: #ffffff;
+  border: 10px solid #ffffff;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: none;
+  transition:
+    transform 0.3s ease,
+    z-index 0.2s ease;
+}
+
+.hero-photo-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.hero-photo-card.card-left {
+  left: 1px;
+  transform: rotate(-8deg) translateY(8px);
+  z-index: 1;
+}
+
+.hero-photo-card.card-center {
+  left: 50%;
+  transform: translateX(-50%) rotate(8deg) translateY(-6px);
+  z-index: 2;
+}
+
+.hero-photo-card.card-right {
+  right: -25px;
+  transform: rotate(-5deg) translateY(6px);
+  z-index: 3;
+}
+
+.hero-photo-card:hover {
+  z-index: 10;
+  transform: scale(1.05) rotate(0deg);
+}
+
+.hero-photo-card.card-center:hover {
+  transform: translateX(-50%) scale(1.05) rotate(0deg);
+}
+
+/* ========== Section 2: Our Name ========== */
+.our-name-section {
+  width: 100%;
+  background-color: #ffffff;
+  padding: 85px 20px 90px;
+}
+
+.our-name-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  align-items: center;
+  gap: 50px;
+}
+
+.our-name-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background-color: #065553;
+  color: #ffffff;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 5px 14px;
+  border-radius: 50px;
+  margin-bottom: 18px;
+}
+
+.quran-verse-arabic {
+  font-family: "Noto Naskh Arabic", "Inter", serif;
+  font-size: 42px;
+  font-weight: 700;
+  color: #e39a06;
+  line-height: 1.35;
+  text-align: left;
+  margin-bottom: 8px;
+}
+
+/* الزخرفة الذهبية تحت الآية */
+.verse-divider {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  max-width: 340px;
+  margin-bottom: 16px;
+}
+
+.divider-line {
+  flex: 1;
+  height: 1.5px;
+  background-color: #e39a06;
+  opacity: 0.7;
+}
+
+.divider-symbol {
+  color: #e39a06;
+  font-size: 14px;
+  line-height: 1;
+}
+
+.verse-translation {
+  font-size: 17px;
+  font-weight: 700;
+  color: #e39a06;
+  margin-bottom: 4px;
+}
+
+.verse-reference {
+  display: block;
+  font-size: 11.5px;
+  font-weight: 700;
+  color: #313131;
+  margin-bottom: 24px;
+}
+
+.our-name-desc {
+  font-size: 16.5px;
+  font-weight: 400;
+  color: #464545;
+  line-height: 1.7;
+  max-width: 560px;
+}
+
+/* Right Illustration */
+.our-name-visual {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.our-name-img {
+  width: 100%;
+  max-width: 385px;
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
+
+/* ========== Responsive Design ========== */
+@media (max-width: 991px) {
+  .about-hero-grid,
+  .our-name-grid {
+    grid-template-columns: 1fr;
+    gap: 45px;
+  }
+
+  .about-hero-cards {
+    max-width: 480px;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  .about-hero-title {
+    font-size: 34px;
+  }
+}
+
+@media (max-width: 576px) {
+  .about-hero-section {
+    padding: 45px 16px 60px;
+  }
+
+  .our-name-section {
+    padding: 55px 16px 65px;
+  }
+
+  .about-hero-title {
+    font-size: 28px;
+  }
+
+  .about-hero-cards {
+    height: 230px;
+  }
+
+  .hero-photo-card {
+    width: 135px;
+    height: 165px;
+  }
+
+  .hero-photo-card.card-left {
+    left: 10px;
+  }
+
+  .hero-photo-card.card-right {
+    right: 10px;
+  }
+
+  .quran-verse-arabic {
+    font-size: 32px;
+  }
+
+  .our-name-img {
+    max-width: 260px;
+  }
+}
+
+/* ========== Section 3: Bridging the Gap ========== */
+.bridging-gap-section {
+  width: 100%;
+  background-color: #046868;
+  padding: 90px 20px;
+  color: #ffffff;
+}
+
+.bridging-gap-grid {
+  display: grid;
+  grid-template-columns: 0.95fr 1.05fr;
+  align-items: center;
+  gap: 54px;
+}
+
+/* Left Column */
+.gap-pill-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  background-color: #eaf2f2;
+  color: #313131;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 6px 14px;
+  border-radius: 50px;
+  margin-bottom: 22px;
+}
+
+.gap-main-title {
+  font-size: 36px;
+  font-weight: 800;
+  color: #ffffff;
+  line-height: 1.24;
+  margin-bottom: 20px;
+  letter-spacing: -0.5px;
+}
+
+.gap-main-desc {
+  font-size: 14.5px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.85);
+  line-height: 1.7;
+  margin-bottom: 34px;
+  max-width: 480px;
+}
+
+/* White Highlight Box */
+.gap-highlight-box {
+  background-color: #ffffff;
+  border-radius: 14px;
+  padding: 20px 22px;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  max-width: 475px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.highlight-bulb-icon {
+  display: inline-flex;
+  margin-top: 2px;
+  flex-shrink: 0;
+}
+
+.highlight-box-text {
+  font-size: 13px;
+  font-weight: 700;
+  color: #3b3936;
+  line-height: 1.5;
+}
+
+/* Right Column: Dark Cards */
+.gap-right-col {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.gap-dark-card {
+  background-color: #313131;
+  border-radius: 16px;
+  padding: 26px 28px;
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.14);
+  transition: transform 0.25s ease;
+}
+
+.gap-dark-card:hover {
+  transform: translateY(-3px);
+}
+
+.gap-icon-circle {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: #e39a06;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.gap-card-title {
+  font-size: 18px;
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: 8px;
+  letter-spacing: -0.3px;
+}
+
+.gap-card-desc {
+  font-size: 12.5px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.72);
+  line-height: 1.6;
+  max-width: 480px;
+}
+
+/* ========== Responsive Additions ========== */
+@media (max-width: 991px) {
+  .bridging-gap-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .gap-main-desc,
+  .gap-highlight-box {
+    max-width: 100%;
+  }
+
+  .gap-main-title {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 576px) {
+  .bridging-gap-section {
+    padding: 60px 16px;
+  }
+
+  .gap-main-title {
+    font-size: 25px;
+  }
+
+  .gap-dark-card {
+    padding: 20px 18px;
+    gap: 14px;
+  }
+
+  .gap-icon-circle {
+    width: 38px;
+    height: 38px;
+  }
+
+  .gap-card-title {
+    font-size: 16px;
+  }
+}

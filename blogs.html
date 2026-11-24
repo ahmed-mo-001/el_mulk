@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AL-MULK - Online Learning Academy</title>
+    <!-- ربط ملف الـ CSS -->
+    <link rel="stylesheet" href="/assets/css/blogs.css" />
+    <link rel="stylesheet" href="/assets/css/componentsCss/navbar.css" />
+    <link rel="stylesheet" href="/assets/css/componentsCss/footer.css" />
+    <link rel="stylesheet" href="/assets/css/componentsCss/guide-card.css" />
+    <link rel="stylesheet" href="/assets/css/componentsCss/faq-section.css" />
+    <link
+      rel="stylesheet"
+      href="/assets/css/componentsCss/cta-banner-section.css"
+    />
+  </head>
+  <body>
+    <!-- شريط التنقل العلوي (Navbar) -->
+    <header class="single-course-nav-section">
+      <div id="navbar-placeholder"></div>
+    </header>
+    <!-- Hero Banner Section -->
+    <main class="page-wrapper">
+      <section class="hero-banner-section">
+        <div class="hero-banner-card">
+          <!-- الخلفية والصورة والتدرج اللوني -->
+          <div class="hero-banner-bg">
+            <!-- استبدل مسار الصورة هنا بالصورة الخاصة بك -->
+            <img
+              src="/assets/images/4cd865f46f9f8e0b04e5b70d86194adcfbc5e44b.webp"
+              alt="Person reading Quran in mosque"
+              class="hero-bg-img"
+            />
+            <div class="hero-gradient-overlay"></div>
+          </div>
+
+          <!-- المحتوى النصي والأزرار -->
+          <div class="hero-banner-content">
+            <h1 class="hero-title">
+              Learn more about the<br />
+              Quran, every week
+            </h1>
+            <p class="hero-subtitle">
+              Practical guides for adults and parents — reading the Quran,
+              Tajweed, Arabic and raising children with the Quran.
+            </p>
+
+            <div class="hero-actions">
+              <a href="courses.html" class="btn-hero btn-hero-primary"
+                >See Our Coures</a
+              >
+              <a href="Contact.html" class="btn-hero btn-hero-outline"
+                >Take Free Session</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Guides / Latest Articles Section -->
+      <section class="guides-section">
+        <div class="guides-container">
+          <!-- Header -->
+          <div class="guides-header">
+            <span class="guides-badge">Latest articles</span>
+            <h2 class="guides-title">Guides for your learning journey</h2>
+            <p class="guides-subtitle">
+              Short, practical reads from our teachers — for beginners, advanced
+              learners and parents.
+            </p>
+          </div>
+
+          <!-- Cards Grid (استدعاء الكارت الجاهز عندك 6 مرات) -->
+          <div class="guides-grid">
+            <div id="guide-card-placeholder"></div>
+            <div id="guide-card-placeholder"></div>
+            <div id="guide-card-placeholder"></div>
+            <div id="guide-card-placeholder"></div>
+            <div id="guide-card-placeholder"></div>
+            <div id="guide-card-placeholder"></div>
+          </div>
+
+          <!-- Pagination -->
+          <div class="guides-pagination" id="guidesPagination">
+            <button
+              type="button"
+              class="page-btn page-prev"
+              id="prevPageBtn"
+              disabled
+            >
+              Previous
+            </button>
+
+            <div class="page-numbers">
+              <button type="button" class="page-num active" data-page="1">
+                1
+              </button>
+              <button type="button" class="page-num" data-page="2">2</button>
+              <button type="button" class="page-num" data-page="3">3</button>
+            </div>
+
+            <button type="button" class="page-btn page-next" id="nextPageBtn">
+              Next
+            </button>
+          </div>
+        </div>
+      </section>
+      <!--  -->
+      <div id="cta-banner-section-placeholder"></div>
+      <!--  -->
+      <div id="faq-section-placeholder"></div>
+      <!--  -->
+      <div id="footer-placeholder"></div>
+    </main>
+
+    <!-- ربط ملف الـ JS -->
+    <script src="/assets/js/main.js"></script>
+  </body>
+</html>

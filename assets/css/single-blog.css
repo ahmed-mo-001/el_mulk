@@ -1,0 +1,621 @@
+/* استيراد خط مشابه جداً للتصميم */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap");
+
+/* إعدادات عامة وتصفير الهوامش */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: clip;
+  background-color: #ffffff;
+}
+
+/* ================= شريط التنقل العلوي لصفحة تفاصيل الكورس (Navbar Section) ================= */
+.single-course-nav-section {
+  width: 100%;
+  padding: 24px 40px 0 40px;
+  background-color: transparent !important;
+  background: transparent !important;
+  box-shadow: none;
+}
+
+/* ========== Blog Article Section ========== */
+.blog-article-section {
+  width: 100%;
+  background-color: transparent !important;
+  background: transparent !important;
+  box-shadow: none;
+  padding: 36px 20px 90px;
+}
+
+.blog-article-container {
+  width: 100%;
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+/* ========== Hero Header & Cover Image ========== */
+.article-hero-header {
+  margin-bottom: 48px;
+}
+
+.article-main-title {
+  font-size: 38px;
+  font-weight: 800;
+  color: #242424;
+  line-height: 1.25;
+  margin-bottom: 14px;
+  letter-spacing: -0.6px;
+}
+
+.article-main-subtitle {
+  font-size: 14.5px;
+  font-weight: 400;
+  color: #777777;
+  margin-bottom: 28px;
+  line-height: 1.5;
+}
+
+.article-cover-wrapper {
+  width: 100%;
+  height: 460px;
+  border-radius: 18px;
+  overflow: hidden;
+  background-color: #f2f2f2;
+}
+
+.article-cover-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* ========== Content & Sticky Sidebar Layout ========== */
+.article-layout-grid {
+  display: grid;
+  grid-template-columns: 1fr 290px;
+  gap: 56px;
+  align-items: start; /* ضروري جداً لعمل الـ sticky بشكل سليم */
+}
+
+/* ========== Left Column: Article Text ========== */
+.article-content-col {
+  width: 100%;
+}
+
+.article-intro-text {
+  font-size: 14px;
+  line-height: 1.7;
+  color: #444444;
+  margin-bottom: 38px;
+}
+
+.text-highlight-teal {
+  color: #065553;
+  font-weight: 600;
+}
+
+.article-step-block {
+  margin-bottom: 42px;
+  scroll-margin-top: 30px;
+}
+
+/* العنوان مع الخط الذهبي الجانبي */
+.article-step-title {
+  position: relative;
+  padding-left: 16px;
+  font-size: 25px;
+  font-weight: 800;
+  color: #065553;
+  line-height: 1.3;
+  margin-bottom: 18px;
+  letter-spacing: -0.4px;
+}
+
+.article-step-title::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 4px;
+  bottom: 4px;
+  width: 4px;
+  background-color: #df9a18;
+  border-radius: 4px;
+}
+
+.article-paragraph {
+  font-size: 13.8px;
+  line-height: 1.72;
+  color: #4a4a4a;
+  margin-bottom: 16px;
+}
+
+/* ========== Right Column: Sticky Aside ========== */
+.article-sidebar-aside {
+  position: sticky;
+  top: 8rem;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+/* 1. TOC Card (ON THIS PAGE) */
+.sidebar-toc-card {
+  background-color: transparent !important;
+  background: transparent !important;
+  box-shadow: none;
+  border: 1px solid #efefef;
+  border-radius: 14px;
+  padding: 20px 18px;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.03);
+}
+
+.toc-heading {
+  font-size: 10.5px;
+  font-weight: 800;
+  color: #333333;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  margin-bottom: 14px;
+}
+
+.toc-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.toc-link {
+  position: relative;
+  display: block;
+  font-size: 11.5px;
+  font-weight: 500;
+  color: #777777;
+  text-decoration: none;
+  padding: 7px 12px;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+.toc-link:hover {
+  color: #065553;
+  background-color: #f6f9f9;
+}
+
+.toc-link.active {
+  background-color: #f1f6f6;
+  color: #065553;
+  font-weight: 700;
+}
+
+.toc-link.active::before {
+  content: "";
+  position: absolute;
+  height: 15px;
+  left: 5px;
+  top: 7px;
+  bottom: 7px;
+  width: 2.5px;
+  background-color: #df9a18;
+  border-radius: 3px;
+}
+
+/* 2. Dark CTA Card */
+.sidebar-cta-card {
+  background-color: #2b2927;
+  border-radius: 14px;
+  padding: 22px 20px;
+  color: #ffffff;
+}
+
+.cta-badge {
+  display: inline-block;
+  background-color: #df9a18;
+  color: #ffffff;
+  font-size: 9.5px;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 50px;
+  margin-bottom: 12px;
+}
+
+.cta-title {
+  font-size: 15.5px;
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1.35;
+  margin-bottom: 8px;
+}
+
+.cta-desc {
+  font-size: 10.5px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.72);
+  line-height: 1.55;
+  margin-bottom: 18px;
+}
+
+.cta-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 36px;
+  background-color: #df9a18;
+  color: #ffffff;
+  border-radius: 50px;
+  font-size: 11.5px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: background-color 0.2s ease;
+}
+
+.cta-btn:hover {
+  background-color: #c98812;
+}
+
+/* 3. Teal Trust Card */
+.sidebar-trust-card {
+  background-color: #0d6866;
+  border-radius: 14px;
+  padding: 14px 16px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #ffffff;
+}
+
+.trust-icon-circle {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  box-shadow: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.trust-title {
+  font-size: 11.5px;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 2px;
+}
+
+.trust-sub {
+  font-size: 9.5px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* ========== Responsive Design ========== */
+@media (max-width: 991px) {
+  .article-layout-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .article-sidebar-aside {
+    position: static;
+  }
+
+  /* نفك العمودين عشان عناصرهم تبقى في نفس الـ grid ونقدر نرتبهم */
+  .article-content-col,
+  .article-sidebar-aside {
+    display: contents;
+  }
+
+  .article-layout-grid {
+    gap: 0; /* المسافات بتيجي من الـ margins زي الأول */
+  }
+
+  .article-intro-text {
+    order: -2;
+  }
+
+  /* الفهرس بعد الـ intro مباشرة */
+  .sidebar-toc-card {
+    order: -1;
+    margin-bottom: 38px;
+  }
+
+  .sidebar-cta-card {
+    margin-top: 40px;
+  }
+
+  .sidebar-trust-card {
+    margin-top: 18px;
+  }
+
+  .article-cover-wrapper {
+    height: 360px;
+  }
+
+  .article-main-title {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 576px) {
+  .blog-article-section {
+    padding: 24px 16px 60px;
+  }
+
+  .article-cover-wrapper {
+    height: 240px;
+    border-radius: 14px;
+  }
+
+  .article-main-title {
+    font-size: 24px;
+  }
+
+  .article-step-title {
+    font-size: 20px;
+  }
+}
+
+/* ========== Step 2: Harakat Cards & Quote Box ========== */
+.harakat-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  margin: 20px 0 22px;
+}
+
+.harakat-card {
+  background-color: #f6f6f6;
+  border-radius: 10px;
+  padding: 16px 15px;
+}
+
+.harakat-title {
+  font-size: 13.5px;
+  font-weight: 700;
+  color: #242424;
+  margin-bottom: 6px;
+}
+
+.harakat-desc {
+  font-size: 11px;
+  font-weight: 400;
+  color: #777777;
+  line-height: 1.5;
+}
+
+/* Quote Box */
+.article-quote-box {
+  position: relative;
+  background-color: #fdf8ee;
+  border-radius: 12px;
+  padding: 22px 26px;
+  margin-top: 22px;
+}
+
+.quote-text {
+  font-size: 12.8px;
+  font-weight: 500;
+  color: #3b3b3b;
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
+.quote-author {
+  display: block;
+  font-size: 10.5px;
+  font-weight: 700;
+  color: #df9a18;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+}
+
+/* ========== Step 3: Inline Image & Caption ========== */
+.article-inline-figure {
+  margin-top: 24px;
+}
+
+.inline-img-wrapper {
+  width: 100%;
+  height: 330px;
+  border-radius: 14px;
+  overflow: hidden;
+  background-color: #f2f2f2;
+  margin-bottom: 10px;
+}
+
+.inline-article-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.inline-img-caption {
+  font-size: 11.5px;
+  color: #555555;
+  line-height: 1.45;
+}
+
+/* ========== Responsive Additions ========== */
+@media (max-width: 767px) {
+  .harakat-cards-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .inline-img-wrapper {
+    height: 230px;
+  }
+}
+
+/* ========== Step 4: Tajweed Rules Cards ========== */
+.tajweed-rules-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.tajweed-rule-card {
+  background-color: #f3f3f3;
+  border-radius: 10px;
+  padding: 16px 20px;
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.tajweed-rule-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2px;
+  flex-shrink: 0;
+}
+
+.tajweed-rule-text {
+  font-size: 13px;
+  font-weight: 400;
+  color: #4a4a4a;
+  line-height: 1.6;
+}
+
+.tajweed-rule-text strong {
+  font-weight: 700;
+  color: #242424;
+}
+
+/* ========== Step 5: Practical Habits List ========== */
+.practical-habits-box {
+  margin-top: 26px;
+}
+
+.habits-heading {
+  font-size: 15.5px;
+  font-weight: 800;
+  color: #242424;
+  margin-bottom: 20px;
+}
+
+.habits-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.habit-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+}
+
+.habit-num-badge {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: #065553;
+  color: #ffffff;
+  font-size: 11.5px;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.habit-content {
+  max-width: 480px;
+}
+
+.habit-title {
+  font-size: 13.5px;
+  font-weight: 700;
+  color: #242424;
+  margin-bottom: 4px;
+}
+
+.habit-desc {
+  font-size: 11.5px;
+  font-weight: 400;
+  color: #777777;
+  line-height: 1.5;
+}
+
+/* ========== Keep Reading Section ========== */
+.keep-reading-section {
+  width: 100%;
+  background-color: #f9f8f4; /* لون الخلفية الكريمي الفاتح المطابق للصورة */
+  padding: 75px 20px 90px;
+}
+
+.keep-reading-container {
+  width: 100%;
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+.keep-reading-header {
+  margin-bottom: 36px;
+}
+
+.keep-reading-sub {
+  display: block;
+  font-size: 13px;
+  font-weight: 500;
+  color: #df9a18;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.keep-reading-title {
+  font-size: 38px;
+  font-weight: 800;
+  color: #2b2927;
+  letter-spacing: -0.5px;
+}
+
+/* Grid for the 3 cards */
+.keep-reading-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+/* ========== Responsive Design ========== */
+@media (max-width: 991px) {
+  .keep-reading-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 22px;
+  }
+
+  .keep-reading-title {
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 640px) {
+  .keep-reading-section {
+    padding: 50px 16px 65px;
+  }
+
+  .keep-reading-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .keep-reading-title {
+    font-size: 26px;
+  }
+}

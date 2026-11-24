@@ -1,0 +1,314 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Build Your Learning Plan - AL-MULK Academy</title>
+
+    <!-- ربط ملفات الـ CSS -->
+    <link rel="stylesheet" href="assets/css//subscribe.css" />
+    <link rel="stylesheet" href="assets/css/componentsCss/navbar.css" />
+    <link rel="stylesheet" href="assets/css/componentsCss/pricing.css" />
+  </head>
+  <body>
+    <!-- شريط التنقل العلوي (Navbar) -->
+    <header class="single-course-nav-section">
+      <div id="navbar-placeholder"></div>
+    </header>
+    <!-- ================= قسم حاسبة الخطط والاشتراكات ================= -->
+    <section class="pricing-calculator-section">
+      <div class="pricing-container">
+        <!-- الهيدر العلوي -->
+        <div class="pricing-header">
+          <span class="pricing-top-badge">FEE CALCULATOR</span>
+          <h1 class="pricing-main-title">Build your learning plan</h1>
+          <p class="pricing-subtitle">
+            Tailor your weekly cadence according to your child's age or your
+            personal<br />
+            Quran memorization goal.
+          </p>
+        </div>
+
+        <!-- أزرار التبديل (Monthly plan / Lesson package) -->
+        <div class="pricing-tabs-wrapper">
+          <button
+            type="button"
+            class="pricing-tab-btn active"
+            data-target="monthlyPlanView"
+          >
+            Monthly plan
+          </button>
+          <button
+            type="button"
+            class="pricing-tab-btn"
+            data-target="lessonPackageView"
+          >
+            Lesson package
+          </button>
+        </div>
+
+        <!-- الكارت الأبيض الرئيسي -->
+        <div class="subscription-card-box">
+          <h2 class="box-inner-title">
+            Select the payment and subscription type.
+          </h2>
+
+          <!-- 1. اختيار مدة الدرس (مشترك في التبويبين) -->
+          <div class="form-group">
+            <label class="form-label"
+              >Lesson durattion<span class="required-star">*</span></label
+            >
+            <div class="duration-grid" id="durationOptions">
+              <button type="button" class="duration-btn active">
+                30 minutes for lesson
+              </button>
+              <button type="button" class="duration-btn">
+                45 minutes for lesson
+              </button>
+              <button type="button" class="duration-btn">
+                30 minutes for lesson
+              </button>
+            </div>
+          </div>
+
+          <!-- ================= محتوى التبويب الأول: Monthly plan ================= -->
+          <div id="monthlyPlanView" class="plan-view-content active">
+            <!-- اختيار المعلم المفضل -->
+            <div class="form-group">
+              <label class="form-label"
+                >Preferred teacher <span class="required-star">*</span></label
+              >
+              <div class="teacher-grid" id="teacherOptions">
+                <button type="button" class="teacher-btn">
+                  Female teacher
+                </button>
+                <button type="button" class="teacher-btn">Male teacher</button>
+                <button type="button" class="teacher-btn active">
+                  No preference
+                </button>
+              </div>
+            </div>
+
+            <!-- عدد الدروس في الأسبوع -->
+            <div class="form-group">
+              <div class="label-with-hint">
+                <label class="form-label"
+                  >Number lessons per week<span class="required-star"
+                    >*</span
+                  ></label
+                >
+                <span class="recommended-hint"
+                  >Recommended for kids: 2–3 hours</span
+                >
+              </div>
+              <div class="days-number-grid" id="daysOptions">
+                <button type="button" class="day-num-btn active">1</button>
+                <button type="button" class="day-num-btn">2</button>
+                <button type="button" class="day-num-btn">3</button>
+                <button type="button" class="day-num-btn">4</button>
+                <button type="button" class="day-num-btn">5</button>
+                <button type="button" class="day-num-btn">6</button>
+                <button type="button" class="day-num-btn">7</button>
+              </div>
+            </div>
+
+            <p class="billing-info-text">
+              Billed every 4 weeks automatically. Free lesson rescheduling with
+              12h notice.
+            </p>
+          </div>
+
+          <!-- ================= محتوى التبويب الثاني: Lesson package ================= -->
+          <div id="lessonPackageView" class="plan-view-content">
+            <div class="form-group">
+              <label class="form-label"
+                >Select package size<span class="required-star">*</span></label
+              >
+
+              <!-- شريط عداد الدروس العلوي -->
+              <div class="package-counter-bar">
+                <div class="counter-bar-info">
+                  <h4 id="counterTitleText">0 lessons</h4>
+                  <p>Start by adding the number of lessons.</p>
+                </div>
+                <div class="counter-controls">
+                  <button
+                    type="button"
+                    class="counter-btn btn-minus"
+                    id="decreaseLessonsBtn"
+                    aria-label="Decrease lessons"
+                  >
+                    −
+                  </button>
+                  <span class="counter-value" id="lessonCountDisplay">0</span>
+                  <button
+                    type="button"
+                    class="counter-btn btn-plus"
+                    id="increaseLessonsBtn"
+                    aria-label="Increase lessons"
+                  >
+                    +
+                  </button>
+                </div>
+              </div>
+
+              <!-- شبكة الباقات الجاهزة (10 / 20 / 40 / 60) -->
+              <div class="package-cards-grid" id="packagePresetsGrid">
+                <!-- باقة 10 دروس -->
+                <div class="package-preset-card" data-lessons="10">
+                  <div class="preset-info">
+                    <h4>10 lessons</h4>
+                    <p>Standard single rate</p>
+                  </div>
+                </div>
+
+                <!-- باقة 20 درس -->
+                <div class="package-preset-card" data-lessons="20">
+                  <div class="preset-info">
+                    <h4>20 lessons</h4>
+                    <p>Save 5% on tuition</p>
+                  </div>
+                  <span class="discount-pill">5%</span>
+                </div>
+
+                <!-- باقة 40 درس -->
+                <div class="package-preset-card" data-lessons="40">
+                  <div class="preset-info">
+                    <div class="preset-title-row">
+                      <h4>40 lessons</h4>
+                      <span class="best-value-badge">BEST VALUE</span>
+                    </div>
+                    <p>Save 10% on tuition</p>
+                  </div>
+                  <span class="discount-pill">10%</span>
+                </div>
+
+                <!-- باقة 60 درس -->
+                <div class="package-preset-card" data-lessons="60">
+                  <div class="preset-info">
+                    <h4>60 lessons</h4>
+                    <p>Save 15% · Ideal for family shared pool</p>
+                  </div>
+                  <span class="discount-pill">15%</span>
+                </div>
+              </div>
+            </div>
+
+            <p class="package-validity-note">
+              <span class="validity-check">✓</span> Use your lessons anytime
+              within 6 months.
+            </p>
+          </div>
+
+          <!-- زر التأكيد المشترك (Confirm Subscription) -->
+          <button
+            type="button"
+            class="btn-confirm-subscription"
+            id="confirmSubBtn"
+          >
+            <!-- أيقونة النجمة المشرشرة بداخلها علامة صح كما في التصميم -->
+            <svg class="confirm-badge-icon" viewBox="0 0 24 24" fill="none">
+              <path
+                d="M12 2L14.4 4.2L17.6 3.8L18.7 6.9L21.8 8.3L21 11.5L22.8 14.2L20.3 16.3L20.4 19.6L17.2 20.3L15.4 23L12 21.8L8.6 23L6.8 20.3L3.6 19.6L3.7 16.3L1.2 14.2L3 11.5L2.2 8.3L5.3 6.9L6.4 3.8L9.6 4.2L12 2Z"
+                fill="#ffffff"
+              />
+              <path
+                d="M8.8 12.2L11 14.4L15.4 10"
+                stroke="#e29600"
+                stroke-width="2.2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+            <span>Confirm Subscription</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= المربع المنبثق ببيانات ثابتة (YOUR PLAN Modal) ================= -->
+    <div class="subscription-modal-overlay" id="subscriptionModal">
+      <div class="plan-summary-modal">
+        <!-- الصف العلوي: شارة YOUR PLAN + مدة الدرس -->
+        <div class="plan-modal-top">
+          <span class="your-plan-badge">YOUR PLAN</span>
+          <span class="plan-format-text">Private 1:1 · 30m</span>
+        </div>
+
+        <!-- السعر الإجمالي والدورة -->
+        <div class="plan-price-block">
+          <div class="plan-price-line">
+            <span class="plan-total-price">€24</span>
+            <span class="plan-billing-cycle">/ 4 weeks</span>
+          </div>
+          <p class="plan-cycle-note">
+            Automatic recurring cycle, cancel anytime.
+          </p>
+        </div>
+
+        <!-- خط فاصل -->
+        <hr class="plan-modal-divider" />
+
+        <!-- تفاصيل الخطة (ثابتة كما في الصورة) -->
+        <ul class="plan-breakdown-list">
+          <li>
+            <div class="breakdown-left">
+              <span class="modal-check-circle">
+                <svg viewBox="0 0 16 16" fill="none">
+                  <path
+                    d="M12.5 4.5L6.5 10.5L3.5 7.5"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </span>
+              <span class="breakdown-title">4 lessons / month</span>
+            </div>
+            <span class="breakdown-value">1x per week</span>
+          </li>
+
+          <li>
+            <div class="breakdown-left">
+              <span class="modal-check-circle">
+                <svg viewBox="0 0 16 16" fill="none">
+                  <path
+                    d="M12.5 4.5L6.5 10.5L3.5 7.5"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </span>
+              <span class="breakdown-title">Rate per lesson</span>
+            </div>
+            <span class="breakdown-value">€6.00</span>
+          </li>
+        </ul>
+
+        <!-- زر التأكيد داخل المربع -->
+        <button type="button" class="btn-modal-confirm" id="finalConfirmBtn">
+          <svg class="confirm-badge-icon" viewBox="0 0 24 24" fill="none">
+            <path
+              d="M12 2L14.4 4.2L17.6 3.8L18.7 6.9L21.8 8.3L21 11.5L22.8 14.2L20.3 16.3L20.4 19.6L17.2 20.3L15.4 23L12 21.8L8.6 23L6.8 20.3L3.6 19.6L3.7 16.3L1.2 14.2L3 11.5L2.2 8.3L5.3 6.9L6.4 3.8L9.6 4.2L12 2Z"
+              fill="#ffffff"
+            />
+            <path
+              d="M8.8 12.2L11 14.4L15.4 10"
+              stroke="#e29600"
+              stroke-width="2.2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+          <span>Confirm Subscription</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- ربط ملف الجافاسكريبت -->
+    <script src="/assets/js/main.js"></script>
+  </body>
+</html>

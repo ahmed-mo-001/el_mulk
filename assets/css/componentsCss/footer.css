@@ -1,0 +1,262 @@
+/* ================= تنسيقات القسم التاسع (Footer Section) ================= */
+.site-footer {
+  background-color: #006c6c; /* درجة التييل الغامق المطابقة للفوتر في الصورة */
+  color: #ffffff;
+  padding: 75px 60px 38px 60px;
+  width: 100%;
+}
+
+.footer-container {
+  max-width: 1180px;
+  margin: 0 auto;
+}
+
+/* تخطيط الجزء العلوي من الفوتر */
+.footer-top {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr 1.15fr 1.15fr;
+  gap: 40px;
+  align-items: start;
+  margin-bottom: 85px;
+}
+
+/* 1. الصندوق الأبيض للوجو الأكاديمية */
+.footer-logo-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff;
+  width: 185px;
+  height: 175px;
+  border-radius: 16px;
+  padding: 16px;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.12);
+  text-decoration: none;
+  transition: transform 0.25s ease;
+}
+
+.footer-logo-card:hover {
+  transform: translateY(-3px);
+}
+
+.footer-logo-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+  transform: scale(1.25); /* الـ zoom in - زوّد الرقم لو عايز أكتر */
+}
+
+/* عناوين الأعمدة باللون البرتقالي/الذهبي */
+.footer-col-title {
+  color: #e39a06;
+  font-size: 20px;
+  font-weight: 800;
+  margin-bottom: 22px;
+  letter-spacing: -0.2px;
+}
+
+/* قوائم الروابط (Academy & Courses) */
+.footer-links-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.footer-links-list li a {
+  color: rgba(255, 255, 255, 0.92);
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 400;
+  transition: color 0.2s ease;
+}
+
+.footer-links-list li a:hover {
+  color: #e59400;
+}
+
+/* الرابط المميز باللون الذهبي في عمود الكورسات */
+.footer-links-list li a.highlight-link {
+  color: #c79a2b;
+  font-weight: 500;
+}
+
+.footer-links-list li a.highlight-link:hover {
+  color: #e59400;
+}
+
+/* قائمة التواصل والدعم (Contact & Support) */
+.footer-contact-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 24px;
+}
+
+.footer-contact-list li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 16px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.92);
+}
+
+.footer-contact-list li a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.footer-contact-list li a:hover {
+  color: #e59400;
+}
+
+/* أيقونات التواصل المرسومة (SVG) */
+.contact-svg-icon {
+  width: 17px;
+  height: 17px;
+  color: #ffffff;
+  flex-shrink: 0;
+  display: block;
+}
+
+/* أيقونات السوشيال ميديا (دائرة بيضاء جاهزة وبداخلها صورك) */
+.footer-social-links {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.social-circle-link {
+  width: 34px;
+  height: 34px;
+  background-color: #ffffff; /* الدائرة البيضاء ثابتة */
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+  transition: transform 0.25s ease;
+}
+
+.social-circle-link:hover {
+  transform: translateY(-3px);
+}
+
+.social-icon-img {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+  display: block;
+}
+
+/* الشريط السفلي (Copyright + Four Software + Legal Links) */
+.footer-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding-top: 10px;
+}
+
+.footer-copyright {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.55);
+  font-weight: 400;
+}
+
+/* صورة لوجو Four Software في المنتصف */
+.developer-logo-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+.developer-logo-link:hover {
+  opacity: 0.85;
+}
+
+.developer-logo-img {
+  height: 26px;
+  width: auto;
+  object-fit: contain;
+  display: block;
+}
+
+/* روابط Privacy Policy و Terms of Service */
+.footer-legal-links {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.footer-legal-links a {
+  font-size: 14px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.55);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: color 0.2s ease;
+}
+
+.footer-legal-links a:hover {
+  color: #ffffff;
+}
+
+/* التجاوب مع الشاشات المتوسطة والموبايل */
+@media (max-width: 992px) {
+  .site-footer {
+    padding: 60px 30px 35px 30px;
+  }
+  .footer-top {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px 30px;
+    margin-bottom: 55px;
+  }
+}
+
+/* الشاشة المتوسطة فقط: Courses مكان Academy + لوجو Four تحت الباقي */
+@media (min-width: 641px) and (max-width: 992px) {
+  .footer-top > .footer-logo-col {
+    order: 1;
+  }
+  .footer-top > .footer-links-col:nth-child(3) {
+    order: 2; /* Courses */
+  }
+  .footer-top > .footer-links-col:nth-child(2) {
+    order: 3; /* Academy */
+  }
+  .footer-top > .footer-contact-col {
+    order: 4;
+  }
+
+  .footer-bottom {
+    flex-wrap: wrap;
+    row-gap: 28px;
+  }
+  .developer-logo-link {
+    order: 3;
+    flex-basis: 100%;
+  }
+}
+
+@media (max-width: 640px) {
+  .site-footer {
+    padding: 50px 20px 30px 20px;
+  }
+  .footer-top {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+    gap: 18px;
+  }
+}

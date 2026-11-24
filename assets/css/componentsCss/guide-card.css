@@ -1,0 +1,98 @@
+/* ================= تنسيقات كارت المقال (Blog Card) ================= */
+.blog-card,
+.blog-card * {
+  box-sizing: border-box;
+}
+
+.blog-card {
+  width: 100%;
+  max-width: 375px;
+  background-color: #ffffff;
+  border-radius: 22px;
+  overflow: hidden; /* يضمن قص الصورة العلوية والزر السفلي على نفس انحناء الكارت */
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.blog-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 38px rgba(0, 0, 0, 0.12);
+}
+
+/* حاوية الصورة العلوية */
+.blog-card-image {
+  width: 100%;
+  height: 245px;
+  overflow: hidden;
+  background-color: #f3efe8;
+  flex-shrink: 0;
+}
+
+.blog-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+/* الجزء الأوسط (النصوص) */
+.blog-card-body {
+  padding: 26px 26px 28px 26px;
+  background-color: #ffffff;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.blog-card-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: #313131;
+  line-height: 1.38;
+  margin: 0 0 14px 0;
+  letter-spacing: -0.2px;
+}
+
+.blog-card-excerpt {
+  font-size: 14.5px;
+  font-weight: 400;
+  color: #464545cc;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* الشريط البرتقالي السفلي */
+.blog-card-footer-btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  background-color: #e39a06;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 20px 26px;
+  font-size: 18px;
+  font-weight: 700;
+  transition: background-color 0.2s ease;
+}
+
+.blog-card-footer-btn:hover {
+  background-color: #cc8600;
+}
+
+.blog-arrow-icon {
+  width: 28px;
+  height: 16px;
+  flex-shrink: 0;
+  transition: transform 0.2s ease;
+}
+
+.blog-card-footer-btn:hover .blog-arrow-icon {
+  transform: translateX(4px);
+}

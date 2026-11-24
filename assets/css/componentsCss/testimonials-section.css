@@ -1,0 +1,304 @@
+/* ================= تنسيقات قسم آراء العملاء (Testimonials Section) ================= */
+.testimonials-section {
+  background-color: #fbf9f4; /* نفس درجة الخلفية الكريمي الفاتحة */
+  padding: 90px 40px 85px 40px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.testimonials-container {
+  max-width: 1240px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* الشارة العلوية */
+.testimonials-badge {
+  display: inline-block;
+  background-color: #f6ebd1;
+  color: #e29300;
+  font-size: 12.5px;
+  font-weight: 700;
+  padding: 8px 20px;
+  border-radius: 50px;
+  margin-bottom: 18px;
+}
+
+/* العنوان الرئيسي */
+.testimonials-title {
+  font-size: 44px;
+  font-weight: 700;
+  color: #313131;
+  line-height: 1.16;
+  margin-bottom: 50px;
+  letter-spacing: -0.6px;
+}
+
+.testimonials-title .highlight-orange {
+  color: #e39a06;
+}
+
+/* منطقة الكاروسيل والأسهم */
+.testimonials-slider-area {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 45px;
+}
+
+/* أزرار الأسهم يمين ويسار */
+.slider-arrow {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition:
+    transform 0.2s ease,
+    color 0.2s ease;
+  z-index: 20;
+  flex-shrink: 0;
+}
+
+.slider-arrow svg {
+  width: 38px;
+  height: 32px;
+}
+
+.arrow-left {
+  color: #e59400; /* رمادي فاتح كما في التصميم */
+}
+
+.arrow-left:hover {
+  color: #c88000;
+  transform: translateX(-3px);
+}
+
+.arrow-right {
+  color: #e59400; /* برتقالي كما في التصميم */
+}
+
+.arrow-right:hover {
+  color: #c88000;
+  transform: translateX(3px);
+}
+
+/* مسرح الكروت الـ 5 */
+.testimonials-stage {
+  position: relative;
+  width: 1020px;
+  height: 330px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* التصميم المشترك للكارت */
+.testim-card {
+  position: absolute;
+  width: 265px;
+  height: 255px;
+  border-radius: 16px;
+  padding: 24px 22px 20px 22px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  user-select: none;
+  transition:
+    transform 0.55s cubic-bezier(0.25, 1, 0.5, 1),
+    box-shadow 0.55s ease,
+    opacity 0.55s ease,
+    z-index 0s;
+}
+
+/* النجوم */
+.testim-stars {
+  display: flex;
+  gap: 3px;
+  font-size: 16px;
+  line-height: 1;
+  margin-bottom: 10px;
+}
+
+.stars-gold {
+  color: #f59e0b;
+}
+
+.stars-white {
+  color: #ffffff;
+}
+
+/* نص التقييم */
+.testim-text {
+  font-size: 13px;
+  line-height: 1.52;
+  font-weight: 400;
+  margin-bottom: auto;
+}
+
+/* بيانات صاحب التقييم بالأسفل */
+.testim-author {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-top: 12px;
+  border-top: 1px solid rgba(255, 255, 255, 0.16);
+  margin-top: 12px;
+}
+
+.author-avatar {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.author-info h4 {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.author-info span {
+  font-size: 12px;
+  font-weight: 400;
+  opacity: 0.78;
+  display: block;
+}
+
+/* ================= ألوان وثيمات الكروت الـ 5 ================= */
+.theme-orange {
+  background-color: #d48700;
+  color: #ffffff;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+}
+
+.theme-dark {
+  background-color: #2f3030;
+  color: #ffffff;
+  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.18);
+}
+
+.theme-teal {
+  background-color: #06575b;
+  color: #ffffff;
+  box-shadow: 0 14px 32px rgba(6, 87, 91, 0.22);
+}
+
+.theme-white {
+  background-color: #ffffff;
+  color: #2c2d30;
+  border: 1px solid #eceae4;
+  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.08);
+}
+
+.theme-white .testim-text {
+  color: #4a4a4a;
+}
+
+.theme-white .testim-author {
+  border-top-color: #eaeaea;
+}
+
+.theme-white .author-info span {
+  color: #777777;
+}
+
+.theme-teal-back {
+  background-color: #06575b;
+  color: #ffffff;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.14);
+}
+
+/* ================= مواضع الكروت الـ 5 وزوايا الميلان بالمللي ================= */
+
+/* الموضع 0: أقصى اليسار بالخلف (الكارت البرتقالي المائل لليسار) */
+.testim-card.pos-0 {
+  transform: translateX(-335px) translateY(14px) rotate(-6.5deg) scale(0.95);
+  z-index: 1;
+}
+
+/* الموضع 1: يسار المنتصف بالأمام (الكارت الأسود) */
+.testim-card.pos-1 {
+  transform: translateX(-320px) translateY(4px) rotate(1.5deg) scale(0.98);
+  z-index: 3;
+}
+
+/* الموضع 2: الكارت الأوسط الرئيسي (مستقيم مع توهج وظل تييل واضح تحته) */
+.testim-card.pos-2 {
+  transform: translateX(0) translateY(-6px) rotate(0deg) scale(1.03);
+  z-index: 5;
+  box-shadow:
+    0 22px 45px rgba(56, 56, 56, 0.45),
+    0 0 30px rgba(56, 56, 56, 0.45);
+}
+
+/* الموضع 3: يمين المنتصف بالأمام (الكارت الأبيض المائل لليمين) */
+.testim-card.pos-3 {
+  transform: translateX(350px) translateY(4px) rotate(4.8deg) scale(0.98);
+  z-index: 3;
+}
+
+/* الموضع 4: أقصى اليمين بالخلف (الكارت التييل الخلفي) */
+.testim-card.pos-4 {
+  transform: translateX(315px) translateY(14px) rotate(-2.5deg) scale(0.95);
+  z-index: 1;
+}
+
+/* النص السفلي */
+.testimonials-footer-label {
+  color: #e59400;
+  font-size: 15.5px;
+  font-weight: 700;
+  letter-spacing: 0.1px;
+}
+
+/* التجاوب مع الشاشات الأصغر */
+@media (max-width: 1100px) {
+  .testim-card.pos-0 {
+    transform: translateX(-230px) translateY(14px) rotate(-6.5deg) scale(0.9);
+  }
+  .testim-card.pos-1 {
+    transform: translateX(-195px) translateY(4px) rotate(1.5deg) scale(0.94);
+  }
+  .testim-card.pos-3 {
+    transform: translateX(205px) translateY(4px) rotate(4.8deg) scale(0.94);
+  }
+  .testim-card.pos-4 {
+    transform: translateX(180px) translateY(14px) rotate(-2.5deg) scale(0.9);
+  }
+}
+
+@media (max-width: 768px) {
+  .testimonials-section {
+    padding: 60px 16px;
+  }
+  .testimonials-title {
+    font-size: 32px;
+    margin-bottom: 30px;
+  }
+  .testimonials-stage {
+    height: 290px;
+  }
+  .testim-card.pos-0,
+  .testim-card.pos-4 {
+    opacity: 0;
+    pointer-events: none;
+  }
+  .testim-card.pos-1 {
+    transform: translateX(-65px) scale(0.88) rotate(-3deg);
+    opacity: 0.65;
+  }
+  .testim-card.pos-3 {
+    transform: translateX(65px) scale(0.88) rotate(3deg);
+    opacity: 0.65;
+  }
+}

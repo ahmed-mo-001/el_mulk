@@ -1,0 +1,125 @@
+/* ================= تنسيقات القسم الثامن (FAQ Accordion Section) ================= */
+.faq-section {
+  background-color: #ffffff;
+  padding: 80px 60px 100px 60px;
+  width: 100%;
+}
+
+.faq-container {
+  max-width: 780px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* شارة Got Questions? العلوية */
+.faq-top-badge {
+  display: inline-block;
+  background-color: #e5f0f0;
+  color: #046868;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 8px 18px;
+  border-radius: 50px;
+  margin-bottom: 16px;
+}
+
+/* العنوان الرئيسي */
+.faq-main-title {
+  font-size: 44px;
+  font-weight: 700;
+  color: #313131;
+  line-height: 1.16;
+  margin-bottom: 42px;
+  letter-spacing: -0.6px;
+}
+
+/* حاوية الأكورديون */
+.faq-accordion {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  text-align: left;
+}
+
+/* الكارت في حالته المغلقة (اللون البرتقالي) */
+.faq-item {
+  background-color: #e39a06;
+  border-radius: 10px;
+  overflow: hidden;
+  transition:
+    background-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+/* الكارت في حالته المفتوحة (اللون التييل / الأخضر الغامق) */
+.faq-item.active {
+  background-color: #065a5a;
+  box-shadow: 0 10px 26px rgba(5, 90, 91, 0.16);
+}
+
+/* زرار السؤال */
+.faq-question {
+  width: 100%;
+  background: transparent;
+  border: none;
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: 700;
+  padding: 18px 22px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  cursor: pointer;
+  text-align: left;
+}
+
+.faq-icon {
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 1;
+  color: #ffffff;
+  flex-shrink: 0;
+}
+
+/* حاوية الإجابة */
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition:
+    max-height 0.3s ease,
+    padding 0.3s ease;
+  padding: 0 22px;
+}
+
+/* عند فتح الكارت تظهر الإجابة بنفس المسافات في التصميم */
+.faq-item.active .faq-answer {
+  max-height: 220px;
+  padding: 2px 22px 32px 22px;
+}
+
+.faq-answer p {
+  font-size: 16px;
+  line-height: 1.55;
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 400;
+  max-width: 630px;
+}
+
+/* التجاوب مع الشاشات المتوسطة والموبايل */
+@media (max-width: 768px) {
+  .faq-section {
+    padding: 60px 20px 80px 20px;
+  }
+  .faq-main-title {
+    font-size: 34px;
+    margin-bottom: 30px;
+  }
+  .faq-question {
+    font-size: 15.5px;
+    padding: 16px 18px;
+  }
+  .faq-item.active .faq-answer {
+    padding: 0 18px 24px 18px;
+  }
+}

@@ -1,0 +1,355 @@
+/* تثبيت شريط التنقل (Navbar) مع الـ scroll في كل الصفحات */
+.single-course-nav-section {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.single-course-nav-section.nav-overlay,
+.nav-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+/* شريط التنقل العلوي (Navbar) */
+.navbar-wrapper {
+  position: relative;
+  z-index: 100;
+  width: 100%;
+  max-width: 1240px;
+  margin: 0 auto;
+}
+
+.navbar {
+  background-color: #ffffff;
+  border-radius: 60px;
+  padding: 5px 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+.logo {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+.logo-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo-img {
+  width: 72px;
+  height: 72px;
+  object-fit: contain;
+}
+
+.logo-text {
+  font-size: 10px;
+  font-weight: 800;
+  color: #0d5f63;
+  letter-spacing: 0.5px;
+  margin-top: 2px;
+}
+
+/* روابط القائمة */
+.nav-links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 400;
+  color: #464545;
+  transition: color 0.25s ease;
+  display: inline-block;
+}
+
+.nav-links li a:hover {
+  color: #046868;
+}
+
+.nav-links li a.active {
+  color: #046868;
+  font-weight: 700;
+}
+
+/* زر قائمة الموبايل (الهامبرغر) - مخفي افتراضياً على الشاشات الكبيرة */
+.nav-toggle {
+  display: none;
+  background: #f0f7f7;
+  border: 1px solid rgba(14, 99, 105, 0.15);
+  border-radius: 50%;
+  width: 42px;
+  height: 42px;
+  padding: 11px 9px;
+  cursor: pointer;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.25s ease;
+}
+
+.nav-toggle:hover {
+  background: #e2f0f0;
+}
+
+.hamburger-bar {
+  display: block;
+  width: 20px;
+  height: 2px;
+  background-color: #046868;
+  border-radius: 2px;
+  transition:
+    transform 0.3s ease,
+    opacity 0.2s ease;
+}
+
+.nav-toggle.active .hamburger-bar:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.nav-toggle.active .hamburger-bar:nth-child(2) {
+  opacity: 0;
+}
+
+.nav-toggle.active .hamburger-bar:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+/* الأزرار الجانبية في النافبار */
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+/* محول اللغة (ES / EN) */
+.lang-switch {
+  background-color: #e59400;
+  border-radius: 50px;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  width: 96px;
+  height: 44px;
+}
+
+.lang-btn {
+  flex: 1;
+  height: 100%;
+  border: none;
+  background: transparent;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 14px;
+  border-radius: 18px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.lang-btn.active {
+  background-color: #ffffff;
+  color: #e59400;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+/* زر Book a Free Trial في النافبار */
+.btn-book-nav {
+  background-color: #046868;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 12px 24px;
+  border-radius: 50px;
+  font-size: 16px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition:
+    background-color 0.25s ease,
+    transform 0.2s ease;
+}
+
+.btn-book-nav:hover {
+  background-color: #0c4b4f;
+  transform: translateY(-1px);
+}
+
+/* ================= Responsive ================= */
+
+/* لاب توب صغير: تضييق المسافات فقط (نفس الشكل) */
+@media (max-width: 1200px) and (min-width: 993px) {
+  .navbar {
+    padding: 5px 20px;
+  }
+  .nav-links {
+    gap: 18px;
+  }
+  .nav-links li a {
+    font-size: 15px;
+  }
+  .nav-actions {
+    gap: 14px;
+  }
+}
+
+/* تابلت + موبايل: لوجو وهامبرغر فوق، الروابط تحت، وبعدها اللغة والحجز */
+@media (max-width: 992px) {
+  .navbar {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    grid-template-areas:
+      "logo  toggle"
+      "links links"
+      "lang  book";
+    align-items: center;
+    padding: 8px 28px;
+    border-radius: 32px;
+  }
+
+  /* نخلي أزرار nav-actions عناصر مباشرة في الـ grid بدون تغيير الـ HTML */
+  .nav-actions {
+    display: contents;
+  }
+
+  .logo {
+    grid-area: logo;
+    justify-self: start;
+  }
+  .logo-img {
+    width: 72px;
+    height: 72px;
+  }
+
+  /* الهامبرغر بدون خلفية دايرية */
+  .nav-toggle {
+    grid-area: toggle;
+    justify-self: end;
+    display: flex;
+    width: 36px;
+    height: 27px;
+    padding: 0;
+    background: transparent;
+    border: none;
+    border-radius: 0;
+  }
+  .nav-toggle:hover {
+    background: transparent;
+  }
+  .hamburger-bar {
+    width: 100%;
+    height: 3px;
+  }
+
+  /* شكل الهامبرغر يفضل ثابت وهي مفتوحة (زي التصميم).
+     امسح الـ block ده لو عايزه يتحول لـ X */
+  .nav-toggle.active .hamburger-bar:nth-child(1),
+  .nav-toggle.active .hamburger-bar:nth-child(3) {
+    transform: none;
+  }
+  .nav-toggle.active .hamburger-bar:nth-child(2) {
+    opacity: 1;
+  }
+
+  /* مخفيين وهي مقفولة */
+  .nav-links,
+  .lang-switch,
+  .btn-book-nav {
+    display: none;
+  }
+
+  .nav-links {
+    grid-area: links;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2px;
+    margin: 12px 0 22px;
+  }
+  .nav-links li a {
+    display: block;
+    padding: 9px 0;
+    font-size: 18px;
+  }
+
+  .lang-switch {
+    grid-area: lang;
+    justify-self: start;
+  }
+  .btn-book-nav {
+    grid-area: book;
+    justify-self: end;
+    white-space: nowrap;
+  }
+
+  /* ظاهرين وهي مفتوحة */
+  .navbar:has(.nav-toggle.active) .nav-links,
+  .navbar:has(.nav-toggle.active) .lang-switch,
+  .navbar:has(.nav-toggle.active) .btn-book-nav {
+    display: flex;
+    animation: navReveal 0.25s ease both;
+  }
+}
+
+@keyframes navReveal {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* موبايل */
+@media (max-width: 480px) {
+  .navbar {
+    padding: 12px 20px 14px;
+  }
+  .logo-img {
+    width: 60px;
+    height: 60px;
+  }
+  .nav-links li a {
+    font-size: 17px;
+  }
+  .lang-switch {
+    width: 88px;
+    height: 40px;
+  }
+  .lang-btn {
+    font-size: 13px;
+  }
+  .btn-book-nav {
+    padding: 10px 16px;
+    font-size: 14px;
+    gap: 8px;
+  }
+}
+
+/* موبايل صغير جداً */
+@media (max-width: 360px) {
+  .navbar {
+    padding: 12px 16px 14px;
+  }
+  .lang-switch {
+    width: 80px;
+    height: 38px;
+  }
+  .btn-book-nav {
+    padding: 9px 12px;
+    font-size: 13px;
+  }
+}

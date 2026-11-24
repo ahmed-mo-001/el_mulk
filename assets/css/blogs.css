@@ -1,0 +1,391 @@
+/* استيراد خط مشابه جداً للتصميم */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap");
+
+/* إعدادات عامة وتصفير الهوامش */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  overflow-x: hidden;
+  background-color: #ffffff;
+}
+
+/* ================= شريط التنقل العلوي لصفحة تفاصيل الكورس (Navbar Section) ================= */
+.single-course-nav-section {
+  width: 100%;
+  padding: 24px 40px 0 40px;
+  background-color: #ffffff;
+}
+
+/* ========== Hero Banner Section ========== */
+.hero-banner-section {
+  width: 100%;
+  background-color: #ffffff; /* خلفية بيضاء للسيكشن كما في الصورة */
+  padding: 24px 20px 50px;
+}
+
+.hero-banner-card {
+  position: relative;
+  width: 100%;
+  max-width: 1280px;
+  min-height: 500px;
+  margin: 0 auto;
+  border-radius: 20px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  background-color: #046868;
+}
+
+/* ========== Background Image & Overlay ========== */
+.hero-banner-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.hero-bg-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: right center;
+  display: block;
+}
+
+.hero-gradient-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    #045252 0%,
+    #045252 45%,
+    rgba(6, 85, 83, 0.85) 55%,
+    rgba(6, 85, 83, 0.25) 75%,
+    rgba(6, 85, 83, 0.05) 100%
+  );
+}
+
+/* ========== Content Styling ========== */
+.hero-banner-content {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 650px;
+  padding: 60px 0 60px 64px;
+  color: #ffffff;
+}
+
+.hero-title {
+  font-size: 44px;
+  font-weight: 700;
+  line-height: 1.25;
+  margin-bottom: 18px;
+  letter-spacing: -0.5px;
+  color: #ffffff;
+}
+
+.hero-subtitle {
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 42px;
+  max-width: 520px;
+}
+
+/* ========== Buttons Styling ========== */
+.hero-actions {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+.btn-hero {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 165px;
+  padding: 12px 28px;
+  border-radius: 50px;
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.25s ease;
+  cursor: pointer;
+}
+
+.btn-hero-primary {
+  background-color: #df9a18;
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.85);
+}
+
+.btn-hero-primary:hover {
+  background-color: #c98812;
+  transform: translateY(-2px);
+}
+
+.btn-hero-outline {
+  background-color: rgba(255, 255, 255, 0.08);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(4px);
+}
+
+.btn-hero-outline:hover {
+  background-color: rgba(255, 255, 255, 0.18);
+  border-color: #ffffff;
+  transform: translateY(-2px);
+}
+
+/* ========== Responsive Design ========== */
+@media (max-width: 991px) {
+  .hero-banner-card {
+    min-height: 440px;
+  }
+
+  .hero-banner-content {
+    padding: 45px 40px;
+    max-width: 560px;
+  }
+
+  .hero-title {
+    font-size: 36px;
+  }
+
+  .hero-gradient-overlay {
+    background: linear-gradient(
+      90deg,
+      #046868 0%,
+      rgba(6, 85, 83, 0.92) 55%,
+      rgba(6, 85, 83, 0.45) 100%
+    );
+  }
+}
+
+@media (max-width: 767px) {
+  .hero-banner-section {
+    padding: 16px 16px 35px;
+  }
+
+  .hero-banner-card {
+    min-height: 380px;
+    border-radius: 16px;
+  }
+
+  .hero-banner-content {
+    padding: 36px 24px;
+    max-width: 100%;
+  }
+
+  .hero-title {
+    font-size: 28px;
+    margin-bottom: 14px;
+  }
+
+  .hero-subtitle {
+    font-size: 14px;
+    margin-bottom: 28px;
+  }
+
+  .hero-gradient-overlay {
+    background: linear-gradient(
+      180deg,
+      rgba(6, 85, 83, 0.88) 0%,
+      rgba(6, 85, 83, 0.95) 100%
+    );
+  }
+
+  .hero-actions {
+    gap: 12px;
+  }
+
+  .btn-hero {
+    min-width: 145px;
+    padding: 11px 22px;
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 479px) {
+  .hero-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .btn-hero {
+    width: 100%;
+  }
+}
+
+/* ========== Guides / Latest Articles Section ========== */
+.guides-section {
+  width: 100%;
+  background-color: #ffffff;
+  padding: 20px 20px 80px;
+}
+
+.guides-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Header */
+.guides-header {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.guides-badge {
+  display: inline-block;
+  background-color: #e2eff0;
+  color: #0b5a5f;
+  font-size: 13px;
+  font-weight: 500;
+  padding: 6px 18px;
+  border-radius: 50px;
+  margin-bottom: 14px;
+}
+
+.guides-title {
+  font-size: 38px;
+  font-weight: 800;
+  color: #262626;
+  margin-bottom: 12px;
+  letter-spacing: -0.5px;
+}
+
+.guides-subtitle {
+  font-size: 15px;
+  font-weight: 400;
+  color: #7a7a7a;
+  max-width: 650px;
+  margin: 0 auto;
+  line-height: 1.5;
+}
+
+/* ========== Grid Layout ========== */
+.guides-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  margin-bottom: 52px;
+}
+
+/* ========== Pagination ========== */
+.guides-pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.page-btn {
+  padding: 10px 24px;
+  border-radius: 50px;
+  border: none;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.page-prev {
+  background-color: #eef3f4;
+  color: #8c9699;
+}
+
+.page-prev:not(:disabled):hover {
+  background-color: #dce6e8;
+  color: #0b5a5f;
+}
+
+.page-prev:disabled {
+  cursor: not-allowed;
+  opacity: 0.85;
+}
+
+.page-next {
+  background-color: #046868;
+  color: #ffffff;
+}
+
+.page-next:hover {
+  background-color: #043e3d;
+}
+
+.page-next:disabled {
+  background-color: #eef3f4;
+  color: #8c9699;
+  cursor: not-allowed;
+}
+
+.page-numbers {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.page-num {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  border: none;
+  background-color: transparent;
+  color: #333333;
+  font-size: 13px;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.page-num:hover {
+  background-color: #eef3f4;
+}
+
+.page-num.active {
+  background-color: #046868;
+  color: #ffffff;
+}
+
+/* ========== Responsive Design ========== */
+@media (max-width: 991px) {
+  .guides-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 22px;
+  }
+
+  .guides-title {
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 640px) {
+  .guides-section {
+    padding: 10px 16px 60px;
+  }
+
+  .guides-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .guides-title {
+    font-size: 26px;
+  }
+
+  .guides-subtitle {
+    font-size: 14px;
+  }
+}
