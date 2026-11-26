@@ -14,6 +14,7 @@
       rel="stylesheet"
       href="/assets/css/componentsCss/cta-banner-section.css"
     />
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
   </head>
   <body>
     <!-- شريط التنقل العلوي (Navbar) -->
@@ -23,7 +24,7 @@
     <!-- Hero Banner Section -->
     <main class="page-wrapper">
       <section class="hero-banner-section">
-        <div class="hero-banner-card">
+        <div class="hero-banner-card" data-aos="zoom-in">
           <!-- الخلفية والصورة والتدرج اللوني -->
           <div class="hero-banner-bg">
             <!-- استبدل مسار الصورة هنا بالصورة الخاصة بك -->
@@ -37,16 +38,16 @@
 
           <!-- المحتوى النصي والأزرار -->
           <div class="hero-banner-content">
-            <h1 class="hero-title">
+            <h1 class="hero-title" data-aos="fade-right">
               Learn more about the<br />
               Quran, every week
             </h1>
-            <p class="hero-subtitle">
+            <p class="hero-subtitle" data-aos="fade-right">
               Practical guides for adults and parents — reading the Quran,
               Tajweed, Arabic and raising children with the Quran.
             </p>
 
-            <div class="hero-actions">
+            <div class="hero-actions" data-aos="fade-left">
               <a href="courses.html" class="btn-hero btn-hero-primary"
                 >See Our Coures</a
               >
@@ -61,7 +62,7 @@
       <section class="guides-section">
         <div class="guides-container">
           <!-- Header -->
-          <div class="guides-header">
+          <div class="guides-header" data-aos="zoom-out">
             <span class="guides-badge">Latest articles</span>
             <h2 class="guides-title">Guides for your learning journey</h2>
             <p class="guides-subtitle">
@@ -71,7 +72,7 @@
           </div>
 
           <!-- Cards Grid (استدعاء الكارت الجاهز عندك 6 مرات) -->
-          <div class="guides-grid">
+          <div class="guides-grid" data-aos="fade-up">
             <div id="guide-card-placeholder"></div>
             <div id="guide-card-placeholder"></div>
             <div id="guide-card-placeholder"></div>
@@ -81,7 +82,11 @@
           </div>
 
           <!-- Pagination -->
-          <div class="guides-pagination" id="guidesPagination">
+          <div
+            class="guides-pagination"
+            id="guidesPagination"
+            data-aos="zoom-out"
+          >
             <button
               type="button"
               class="page-btn page-prev"
@@ -115,5 +120,14 @@
 
     <!-- ربط ملف الـ JS -->
     <script src="/assets/js/main.js"></script>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+    <script>
+      AOS.init({
+        duration: 800,
+        once: true,
+        offset: 100,
+      });
+    </script>
   </body>
 </html>

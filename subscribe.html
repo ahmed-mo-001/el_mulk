@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="assets/css//subscribe.css" />
     <link rel="stylesheet" href="assets/css/componentsCss/navbar.css" />
     <link rel="stylesheet" href="assets/css/componentsCss/pricing.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
   </head>
   <body>
     <!-- شريط التنقل العلوي (Navbar) -->
@@ -19,7 +20,7 @@
     <section class="pricing-calculator-section">
       <div class="pricing-container">
         <!-- الهيدر العلوي -->
-        <div class="pricing-header">
+        <div class="pricing-header" data-aos="fade-up">
           <span class="pricing-top-badge">FEE CALCULATOR</span>
           <h1 class="pricing-main-title">Build your learning plan</h1>
           <p class="pricing-subtitle">
@@ -30,7 +31,7 @@
         </div>
 
         <!-- أزرار التبديل (Monthly plan / Lesson package) -->
-        <div class="pricing-tabs-wrapper">
+        <div class="pricing-tabs-wrapper" data-aos="zoom-in">
           <button
             type="button"
             class="pricing-tab-btn active"
@@ -48,7 +49,7 @@
         </div>
 
         <!-- الكارت الأبيض الرئيسي -->
-        <div class="subscription-card-box">
+        <div class="subscription-card-box" data-aos="zoom-out">
           <h2 class="box-inner-title">
             Select the payment and subscription type.
           </h2>
@@ -310,5 +311,14 @@
 
     <!-- ربط ملف الجافاسكريبت -->
     <script src="/assets/js/main.js"></script>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+    <script>
+      AOS.init({
+        duration: 800,
+        once: true,
+        offset: 100,
+      });
+    </script>
   </body>
 </html>

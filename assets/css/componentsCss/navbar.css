@@ -46,7 +46,7 @@
 }
 
 .logo-img {
-  width: 72px;
+  width: 77px;
   height: 72px;
   object-fit: contain;
 }
@@ -167,6 +167,7 @@
 
 /* زر Book a Free Trial في النافبار */
 .btn-book-nav {
+  height: 48px;
   background-color: #046868;
   color: #ffffff;
   text-decoration: none;

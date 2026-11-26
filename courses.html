@@ -14,6 +14,7 @@
     />
     <link rel="stylesheet" href="/assets/css/componentsCss/faq-section.css" />
     <link rel="stylesheet" href="/assets/css/componentsCss/course-card.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
   </head>
   <body>
     <!-- شريط التنقل العلوي (Navbar) -->
@@ -27,16 +28,18 @@
 
       <div class="advantages-container">
         <!-- الشارة العلوية -->
-        <span class="advantages-top-badge">Advantages Our Courses</span>
+        <span class="advantages-top-badge" data-aos="fade-up"
+          >Advantages Our Courses</span
+        >
 
         <!-- العنوان الرئيسي -->
-        <h2 class="advantages-main-title">
+        <h2 class="advantages-main-title" data-aos="fade-up">
           Crafted for comfort, trust, and<br />
           lasting mastery
         </h2>
 
         <!-- حاوية الكروت الثلاثة المتداخلة والمائلة -->
-        <div class="advantages-cards-wrapper">
+        <div class="advantages-cards-wrapper" data-aos="zoom-in">
           <!-- الكارت الأول (الأيسر - مائل لليسار - لون تييل) -->
           <div class="adv-card card-teal">
             <!-- حط مسار صورة الأيقونة المائية الأولى هنا -->
@@ -114,7 +117,7 @@
     <section class="courses-page-section">
       <div class="courses-page-container">
         <!-- الهيدر العلوي للسكشن -->
-        <div class="courses-page-header">
+        <div class="courses-page-header" data-aos="fade-down">
           <span class="courses-top-badge">FOR ADULTS OR KIDS</span>
           <h2 class="courses-main-title">Our courses</h2>
           <p class="courses-subtitle">
@@ -124,7 +127,7 @@
         </div>
 
         <!-- شبكة الكورسات (6 أماكن لاستدعاء الـ course-card) -->
-        <div class="courses-page-grid">
+        <div class="courses-page-grid" data-aos="fade-up">
           <!-- الكارت الأول -->
           <div class="course-card-slot">
             <div id="course-card-placeholder"></div>
@@ -166,5 +169,14 @@
 
     <!-- ربط ملف الـ JS -->
     <script src="/assets/js/main.js"></script>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+    <script>
+      AOS.init({
+        duration: 800,
+        once: true,
+        offset: 100,
+      });
+    </script>
   </body>
 </html>

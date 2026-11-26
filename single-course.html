@@ -13,6 +13,7 @@
       href="/assets/css/componentsCss/testimonials-section.css"
     />
     <link rel="stylesheet" href="/assets/css/componentsCss/course-card.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
   </head>
   <body>
     <!-- شريط التنقل العلوي (Navbar) -->
@@ -26,7 +27,7 @@
         <!-- العمود الأيسر: الصورة والمحتوى (قابل للـ Scroll وممكن تضيف تحته أي سكاشن تانية) -->
         <div class="course-main-content">
           <!-- صندوق الصورة الرئيسية والبادج العائم -->
-          <div class="course-hero-media">
+          <div class="course-hero-media" data-aos="fade-right">
             <!-- حط مسار الصورة الكبيرة بتاعتك هنا -->
             <img
               src="/assets/images/66e9321798a4cc724d27b7e32d6bcbb9bdeffe57.webp"
@@ -52,14 +53,16 @@
           </div>
 
           <!-- شارة Course Overview -->
-          <span class="overview-pill-badge">Course Overview</span>
+          <span class="overview-pill-badge" data-aos="fade-up"
+            >Course Overview</span
+          >
 
           <!-- العنوان الرئيسي والفقرات النصية -->
-          <h1 class="course-main-heading">
+          <h1 class="course-main-heading" data-aos="fade-up">
             Master recitation at your own pace
           </h1>
 
-          <div class="course-description-text">
+          <div class="course-description-text" data-aos="fade-up">
             <p>
               It is never too late to recite the words of Allah with complete
               confidence, rhythmic poise, and phonetic accuracy. Designed
@@ -79,12 +82,16 @@
 
           <!-- ================= السكشن الأول: What you will learn ================= -->
           <section class="curriculum-learn-section">
-            <span class="curriculum-pill-badge">CURRICULUM HIGHLIGHTS</span>
-            <h2 class="curriculum-section-title">What you will learn</h2>
+            <span class="curriculum-pill-badge" data-aos="fade-up"
+              >CURRICULUM HIGHLIGHTS</span
+            >
+            <h2 class="curriculum-section-title" data-aos="fade-up">
+              What you will learn
+            </h2>
 
             <div class="learn-cards-grid">
               <!-- الكارت 1 -->
-              <div class="learn-item-card">
+              <div class="learn-item-card" data-aos="fade-right">
                 <div class="learn-check-wrapper">
                   <span class="learn-check-circle">✓</span>
                 </div>
@@ -98,7 +105,7 @@
               </div>
 
               <!-- الكارت 2 -->
-              <div class="learn-item-card">
+              <div class="learn-item-card" data-aos="fade-left">
                 <div class="learn-check-wrapper">
                   <span class="learn-check-circle">✓</span>
                 </div>
@@ -112,7 +119,7 @@
               </div>
 
               <!-- الكارت 3 -->
-              <div class="learn-item-card">
+              <div class="learn-item-card" data-aos="fade-right">
                 <div class="learn-check-wrapper">
                   <span class="learn-check-circle">✓</span>
                 </div>
@@ -126,7 +133,7 @@
               </div>
 
               <!-- الكارت 4 -->
-              <div class="learn-item-card">
+              <div class="learn-item-card" data-aos="fade-left">
                 <div class="learn-check-wrapper">
                   <span class="learn-check-circle">✓</span>
                 </div>
@@ -140,7 +147,7 @@
               </div>
 
               <!-- الكارت 5 -->
-              <div class="learn-item-card">
+              <div class="learn-item-card" data-aos="fade-right">
                 <div class="learn-check-wrapper">
                   <span class="learn-check-circle">✓</span>
                 </div>
@@ -154,7 +161,7 @@
               </div>
 
               <!-- الكارت 6 -->
-              <div class="learn-item-card">
+              <div class="learn-item-card" data-aos="fade-left">
                 <div class="learn-check-wrapper">
                   <span class="learn-check-circle">✓</span>
                 </div>
@@ -178,10 +185,10 @@
             <div class="progression-timeline">
               <!-- الخطوة 1 -->
               <div class="timeline-step">
-                <div class="timeline-marker">
-                  <span class="step-num-circle">1</span>
+                <div class="timeline-marker" data-aos="zoom-in">
+                  <span class="step-num-circle" data-aos="zoom-in">1</span>
                 </div>
-                <div class="timeline-content-card">
+                <div class="timeline-content-card" data-aos="fade-left">
                   <div class="timeline-card-top">
                     <h3>Level Check in Your Free Trial</h3>
                     <span class="step-tag tag-teal">Session 1</span>
@@ -196,10 +203,10 @@
 
               <!-- الخطوة 2 -->
               <div class="timeline-step">
-                <div class="timeline-marker">
-                  <span class="step-num-circle">2</span>
+                <div class="timeline-marker" data-aos="zoom-in">
+                  <span class="step-num-circle" data-aos="zoom-in">2</span>
                 </div>
-                <div class="timeline-content-card">
+                <div class="timeline-content-card" data-aos="fade-left">
                   <div class="timeline-card-top">
                     <h3>Letters &amp; Vowels (Harakat)</h3>
                     <span class="step-tag tag-grey">Weeks 2–6</span>
@@ -214,10 +221,10 @@
 
               <!-- الخطوة 3 -->
               <div class="timeline-step">
-                <div class="timeline-marker">
-                  <span class="step-num-circle">3</span>
+                <div class="timeline-marker" data-aos="zoom-in">
+                  <span class="step-num-circle" data-aos="zoom-in">3</span>
                 </div>
-                <div class="timeline-content-card">
+                <div class="timeline-content-card" data-aos="fade-left">
                   <div class="timeline-card-top">
                     <h3>Reading Verses with Tajweed</h3>
                     <span class="step-tag tag-grey">Weeks 7–16</span>
@@ -232,10 +239,10 @@
 
               <!-- الخطوة 4 -->
               <div class="timeline-step">
-                <div class="timeline-marker">
-                  <span class="step-num-circle">4</span>
+                <div class="timeline-marker" data-aos="zoom-in">
+                  <span class="step-num-circle" data-aos="zoom-in">4</span>
                 </div>
-                <div class="timeline-content-card">
+                <div class="timeline-content-card" data-aos="fade-left">
                   <div class="timeline-card-top">
                     <h3>Fluent Reading of the Mushaf</h3>
                     <span class="step-tag tag-teal">Ongoing Mastery</span>
@@ -255,7 +262,7 @@
 
         <!-- العمود الأيمن: كارت تفاصيل الكورس الثابت أثناء الـ Scroll (Sticky Sidebar) -->
         <aside class="course-sticky-sidebar">
-          <div class="course-details-card">
+          <div class="course-details-card" data-aos="fade-left">
             <!-- هيدر الكارت -->
             <div class="details-card-header">
               <div>
@@ -472,7 +479,7 @@
     <section class="related-courses-section">
       <div class="related-courses-container">
         <!-- الهيدر العلوي للسكشن -->
-        <div class="related-header">
+        <div class="related-header" data-aos="fade-up">
           <span class="related-pill-badge">YOUR TEACHERS</span>
           <h2 class="related-main-title">
             Check out another course<br />
@@ -486,7 +493,7 @@
         </div>
 
         <!-- شبكة الـ 3 كروت -->
-        <div class="related-cards-grid">
+        <div class="related-cards-grid" data-aos="zoom-in">
           <!-- الكارت الأول -->
           <div class="course-card-slot">
             <div id="course-card-placeholder"></div>
@@ -505,7 +512,11 @@
 
         <!-- زر Browse Courses السفلي -->
         <div class="browse-btn-wrapper">
-          <a href="courses.html" class="btn-browse-courses">
+          <a
+            href="courses.html"
+            class="btn-browse-courses"
+            data-aos="fade-right"
+          >
             <span>Browse Courses</span>
             <svg viewBox="0 0 24 24" fill="none" class="browse-arrow-icon">
               <path
@@ -525,5 +536,14 @@
 
     <!-- ربط ملف الـ JS -->
     <script src="/assets/js/main.js"></script>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+    <script>
+      AOS.init({
+        duration: 800,
+        once: true,
+        offset: 100,
+      });
+    </script>
   </body>
 </html>

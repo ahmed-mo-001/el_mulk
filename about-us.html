@@ -17,6 +17,7 @@
       href="/assets/css/componentsCss/cta-banner-section.css"
     />
     <link rel="stylesheet" href="/assets/css/componentsCss/faq-section.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
   </head>
   <body>
     <!-- شريط التنقل العلوي (Navbar) -->
@@ -27,7 +28,7 @@
     <section class="about-hero-section">
       <div class="about-container about-hero-grid">
         <!-- النصوص على اليسار -->
-        <div class="about-hero-content">
+        <div class="about-hero-content" data-aos="fade-right">
           <div class="about-gold-badge">
             <span class="badge-white-dot"></span>
             <span>About Al-Mulk Academy</span>
@@ -46,7 +47,7 @@
         </div>
 
         <!-- الثلاث صور المتداخلة على اليمين -->
-        <div class="about-hero-cards">
+        <div class="about-hero-cards" data-aos="zoom-in">
           <div class="hero-photo-card card-left">
             <!-- حط مسار الصورة الأولى (اليسار) هنا -->
             <img
@@ -78,7 +79,7 @@
     <section class="our-name-section">
       <div class="about-container our-name-grid">
         <!-- النصوص والآية على اليسار -->
-        <div class="our-name-content">
+        <div class="our-name-content" data-aos="fade-right">
           <div class="our-name-badge">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none">
               <path
@@ -131,6 +132,7 @@
             src="/assets/images/logo-almulk-Q1xtHfpM 3.webp"
             alt="Al-Mulk Academy Emblem"
             class="our-name-img"
+            data-aos="fade-left"
           />
         </div>
       </div>
@@ -140,7 +142,7 @@
       <div class="about-container bridging-gap-grid">
         <!-- العمود الأيسر -->
         <div class="gap-left-col">
-          <div class="gap-pill-badge">
+          <div class="gap-pill-badge" data-aos="fade-up">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none">
               <circle
                 cx="12"
@@ -160,12 +162,12 @@
             <span>Bridging the gap</span>
           </div>
 
-          <h2 class="gap-main-title">
+          <h2 class="gap-main-title" data-aos="fade-up">
             Learning the Quran shouldn't<br />
             depend on where you live.
           </h2>
 
-          <p class="gap-main-desc">
+          <p class="gap-main-desc" data-aos="fade-up">
             For diaspora families, working professionals, and busy parents,
             locating a patient, certified Quran tutor nearby can feel
             overwhelming. Commutes take hours, group classes overlook individual
@@ -174,7 +176,7 @@
           </p>
 
           <!-- الصندوق الأبيض السفلي -->
-          <div class="gap-highlight-box">
+          <div class="gap-highlight-box" data-aos="zoom-in">
             <span class="highlight-bulb-icon">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
                 <path
@@ -194,7 +196,7 @@
         </div>
 
         <!-- العمود الأيمن: الثلاث كروت الداكنة -->
-        <div class="gap-right-col">
+        <div class="gap-right-col" data-aos="fade-left">
           <!-- الكارت الأول -->
           <div class="gap-dark-card">
             <div class="gap-icon-circle">
@@ -313,5 +315,14 @@
     <div id="footer-placeholder"></div>
     <!-- ربط ملف الـ JS -->
     <script src="/assets/js/main.js"></script>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+    <script>
+      AOS.init({
+        duration: 800,
+        once: true,
+        offset: 100,
+      });
+    </script>
   </body>
 </html>

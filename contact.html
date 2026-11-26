@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="assets/css/contact.css" />
     <link rel="stylesheet" href="assets/css/componentsCss/navbar.css" />
     <link rel="stylesheet" href="assets/css/componentsCss/footer.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
   </head>
   <body>
     <!-- شريط التنقل العلوي (Navbar) -->
@@ -21,7 +22,7 @@
       <div class="contact-split-layout">
         <!-- الجانب الأيسر: الفورم -->
         <div class="contact-left-col">
-          <div class="contact-form-card">
+          <div class="contact-form-card" data-aos="fade-right">
             <h1 class="form-title">Request your trial lesson</h1>
 
             <form id="contactTrialForm" novalidate>
@@ -311,19 +312,19 @@
         <!-- الجانب الأيمن: معلومات التواصل -->
         <div class="contact-right-col">
           <div class="contact-info-wrapper">
-            <div class="info-badge">
+            <div class="info-badge" data-aos="fade-up">
               <span class="badge-dot"></span>
               <span>Contact information</span>
             </div>
 
-            <h2 class="info-title">Assalamu alaikum</h2>
-            <p class="info-subtitle">
+            <h2 class="info-title" data-aos="fade-up">Assalamu alaikum</h2>
+            <p class="info-subtitle" data-aos="fade-up">
               Direct ways to get in touch with our admissions and student
               support team.
             </p>
 
             <!-- الكروت الأربعة المتداخلة -->
-            <div class="info-cards-stack">
+            <div class="info-cards-stack" data-aos="fade-left">
               <!-- الكارت الأول: WhatsApp -->
               <a
                 href="https://wa.me/4917684201948"
@@ -475,5 +476,14 @@
 
     <!-- ربط ملف الـ JS -->
     <script src="/assets/js/main.js"></script>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+    <script>
+      AOS.init({
+        duration: 800,
+        once: true,
+        offset: 100,
+      });
+    </script>
   </body>
 </html>

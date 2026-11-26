@@ -13,6 +13,7 @@ html {
   scroll-behavior: smooth;
 }
 
+html,
 body {
   /* استخدام clip للحفاظ على عمل position: sticky بدون مشاكل */
   overflow-x: clip;

@@ -8,6 +8,7 @@
   font-family: "Inter", sans-serif;
 }
 
+html,
 body {
   overflow-x: clip; /* يمنع السكرول الأفقي وفي نفس الوقت لا يعطل position: sticky للكارت الأيمن */
   background-color: #ffffff;
